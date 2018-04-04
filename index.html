@@ -55,20 +55,22 @@
 
 			$("#titulo").html(NAMEAPP + " - " + NAMECOMP);
 
-			alert("test");
+			// alert("test");
 
 			//recoger la variable instancede mobincube
 			if (checkMobincube()){
 				window.location.href= "mobincube://javascript/getMobToken('{instance}')";
 			}
 
-			if (checkPhonegap()){
-				mobtoken = device.uuid;
-			}else {
-				alert("no phonegap");
-			}
+			// if (checkPhonegap()){
+			// 	mobtoken = device.uuid;
+			// }else {
+			// 	alert("no phonegap");
+			// }
+			//
+			console.log("test");
 
-			alert(mobtoken);
+			alert(device.uuid);
 
 			if (typeof(Storage) !== "undefined") {
 
