@@ -303,8 +303,10 @@ function checkMobincube(){
 function checkPhonegap(){
 	var app = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
 	if ( app ) {
+		// PhoneGap application
 		return true;
 	} else {
+		// Web page
 		return false;
 	}
 }
