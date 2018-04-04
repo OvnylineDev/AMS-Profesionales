@@ -64,10 +64,11 @@
 
 			if (checkPhonegap()){
 				mobtoken = device.uuid;
-				alert(mobtoken);
 			}else {
 				alert("no phonegap");
 			}
+
+			alert(mobtoken);
 
 			if (typeof(Storage) !== "undefined") {
 
