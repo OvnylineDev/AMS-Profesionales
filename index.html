@@ -47,8 +47,9 @@
 	<script>
 		document.addEventListener("deviceready", onDeviceReady, false);
 		function onDeviceReady() {
-			console.log(navigator.camera);
-			console.log(device.cordova);
+			alert("onDeviceReady");
+			alert(navigator.camera);
+			alert(device.cordova);
 		}
 
 		var mobtoken = "";
