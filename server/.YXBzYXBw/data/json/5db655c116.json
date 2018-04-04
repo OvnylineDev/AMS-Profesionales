@@ -1,0 +1,402 @@
+[
+    {
+        "": {
+            "token": "4f2f9c46441d90718e3f",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-20 16:42:09"
+        }
+    },
+    {
+        "": {
+            "token": "52a8f5880bb3d417cf0c",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "nombre": "usuariotest2",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-20 17:00:46"
+        }
+    },
+    {
+        "": {
+            "token": "c2a9a8efac4db2b8ad19",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "nombre": "usuariotest2",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-20 17:07:03"
+        }
+    },
+    {
+        "": {
+            "token": "e3c369bdc83d4ad3e935",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "nombre": "usuariotest2",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-20 17:08:25"
+        }
+    },
+    {
+        "": {
+            "token": "43051b3d50b818fe7ab8",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 10:08:18"
+        }
+    },
+    {
+        "": {
+            "token": "1f2659b3141723860190",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 10:12:51"
+        }
+    },
+    {
+        "": {
+            "token": "8575b206e4952f239cdb",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 10:30:32"
+        }
+    },
+    {
+        "": {
+            "token": "b5a7291afc1593a496f1",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 10:31:12"
+        }
+    },
+    {
+        "": {
+            "token": "f0a8585955d7431b9e11",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 10:49:08"
+        }
+    },
+    {
+        "": {
+            "token": "b0bf199cecfb8923178f",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 10:51:05"
+        }
+    },
+    {
+        "": {
+            "token": "40512d601c6c774e4b8c",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 10:52:38"
+        }
+    },
+    {
+        "": {
+            "token": "3803e1c79b39370ebcc9",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 11:24:24"
+        }
+    },
+    {
+        "": {
+            "token": "9f68bab3eed51a449c3f",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 11:27:55"
+        }
+    },
+    {
+        "": {
+            "token": "a6cdee6acf18d883624c",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "nombre": "usuariotest2",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 11:28:23"
+        }
+    },
+    {
+        "": {
+            "token": "ea7a89b5578c218f780c",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 11:28:57"
+        }
+    },
+    {
+        "": {
+            "token": "837a9279023cec49c1eb",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 11:34:13"
+        }
+    },
+    {
+        "": {
+            "token": "da40cd7e1a043721bca1",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 11:34:40"
+        }
+    },
+    {
+        "": {
+            "token": "c776a8267ae36863a772",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-21 11:42:57"
+        }
+    },
+    {
+        "": {
+            "token": "6292857fa95aed6239e4",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-22 07:31:59"
+        }
+    },
+    {
+        "": {
+            "token": "90cf6074400ef3820c7c",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-22 07:43:04"
+        }
+    },
+    {
+        "": {
+            "token": "42070825e4888f42ca69",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-22 07:45:23"
+        }
+    },
+    {
+        "": {
+            "token": "b7deefbbdba96f2b4999",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-22 07:45:45"
+        }
+    },
+    {
+        "": {
+            "token": "a4dcf555d8ce96d6ae65",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-22 08:39:24"
+        }
+    },
+    {
+        "": {
+            "token": "6ea58cd59285fed2d7c5",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "nombre": "usuariotest2",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-22 08:39:43"
+        }
+    },
+    {
+        "": {
+            "token": "df4f98c3c7687f8537bd",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-22 12:01:15"
+        }
+    },
+    {
+        "": {
+            "token": "aef799bbb9535342d3c6",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-22 12:01:20"
+        }
+    },
+    {
+        "": {
+            "token": "4d1d3ce6aa31358a72c2",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-28 10:38:34"
+        }
+    },
+    {
+        "": {
+            "token": "7f6bbced8da3c6694717",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-28 11:17:01"
+        }
+    },
+    {
+        "": {
+            "token": "d72c9ca1c421b28f9408",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-28 11:52:27"
+        }
+    },
+    {
+        "": {
+            "token": "5e8b639e10ff3b8816c9",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-28 15:06:42"
+        }
+    },
+    {
+        "": {
+            "token": "e8ae84f4ab78cc6d9d56",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-28 15:06:42"
+        }
+    },
+    {
+        "": {
+            "token": "6bd83fa34d3fb68c5658",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-29 09:05:51"
+        }
+    },
+    {
+        "": {
+            "token": "4a6f19a671533c23b0f5",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2017-12-29 09:21:54"
+        }
+    },
+    {
+        "": {
+            "token": "79ece1002e1a5e1ac0fd",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2018-01-02 08:24:21"
+        }
+    },
+    {
+        "": {
+            "token": "ff37f45b9273e3e15f0b",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "nombre": "usuariotest2",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2018-01-03 09:39:38"
+        }
+    },
+    {
+        "": {
+            "token": "879a99f53883eafccd9c",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "nombre": "usuariotest2",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2018-01-03 11:47:16"
+        }
+    },
+    {
+        "": {
+            "token": "22f0dda74e0824bf70aa",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2018-01-03 12:50:07"
+        }
+    },
+    {
+        "": {
+            "token": "394d37e9f5d7030a7e44",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2018-01-04 11:27:01"
+        }
+    },
+    {
+        "": {
+            "token": "357df3072e4782895b9e",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2018-01-04 11:56:56"
+        }
+    },
+    {
+        "": {
+            "token": "c9fb73332a3dfd4f06b2",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "nombre": "usuariotest",
+            "gremio": "ALBAÑILERIA",
+            "subcont": 0,
+            "Fecha": "2018-01-04 11:57:53"
+        }
+    }
+]

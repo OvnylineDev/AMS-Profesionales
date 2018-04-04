@@ -1,0 +1,418 @@
+[
+    {
+        "fich-5a3a1e4d08b859.14442191": {
+            "id": "fich-5a3a1e4d08b859.14442191",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: Imagen",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O FOTOS usuariotest 20-12\\20-12_1-imagen.jpeg",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 36802\/20-12_1-imagen.jpeg",
+            "tipoFichero": "FOTOS",
+            "idSeg": "seg-5a3a1e4c894619.21430115",
+            "fecharegistro": "2017-12-20 08:24:45",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a50b27bf4f9.05404389": {
+            "id": "fich-5a3a50b27bf4f9.05404389",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía realizada en la visita",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O 20-12 ALBAÑILERIA usuariotest2 valoracon economica.pdf",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12 ALBAÑILERIA usuariotest2 valoracon economica.pdf",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a50b20ccbd5.14866318",
+            "fecharegistro": "2017-12-20 11:59:46",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a5180932ff9.69603096": {
+            "id": "fich-5a3a5180932ff9.69603096",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía realizada en la visita",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O 20-12 ALBAÑILERIA usuariotest2 valoracon economica.pdf",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12 ALBAÑILERIA usuariotest2 valoracon economica.pdf",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a518053f4c6.37225017",
+            "fecharegistro": "2017-12-20 12:03:12",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a5188707dd3.02210572": {
+            "id": "fich-5a3a5188707dd3.02210572",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía realizada en la visita",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O 20-12 ALBAÑILERIA usuariotest2 valoracon economica.pdf",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12 ALBAÑILERIA usuariotest2 valoracon economica.pdf",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a51883f8113.13927238",
+            "fecharegistro": "2017-12-20 12:03:20",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a53f5ee8f61.48172070": {
+            "id": "fich-5a3a53f5ee8f61.48172070",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía realizada en la visita",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O 20-12 ALBAÑILERIA usuariotest2 valoracon economica.pdf",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12 ALBAÑILERIA usuariotest2 valoracon economica.pdf",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a53f5adb425.60295564",
+            "fecharegistro": "2017-12-20 12:13:41",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a53ff572b17.27931179": {
+            "id": "fich-5a3a53ff572b17.27931179",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía realizada en la visita",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O 20-12 ALBAÑILERIA usuariotest2 valoracon economica.pdf",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12 ALBAÑILERIA usuariotest2 valoracon economica.pdf",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a53ff2605f7.66128033",
+            "fecharegistro": "2017-12-20 12:13:51",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a541d746851.55442836": {
+            "id": "fich-5a3a541d746851.55442836",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía realizada en la visita",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O 20-12 albanileria usuariotest2 valoracon economica.pdf",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12 albanileria usuariotest2 valoracon economica.pdf",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a541d40c386.17861078",
+            "fecharegistro": "2017-12-20 12:14:21",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a551f702c68.81855463": {
+            "id": "fich-5a3a551f702c68.81855463",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía realizada en la visita",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O 20-12 ALBANILERIA usuariotest2 valoracion economica.pdf",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12 ALBANILERIA usuariotest2 valoracion economica.pdf",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a551f0b27e6.20816961",
+            "fecharegistro": "2017-12-20 12:18:39",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a55eb9a7782.56771849": {
+            "id": "fich-5a3a55eb9a7782.56771849",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía realizada en la visita",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O 20-12 ALBANILERIA usuariotest2 PRESUPUESTOS.pdf",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12 ALBANILERIA usuariotest2 PRESUPUESTOS.pdf",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a55eaf17024.41076658",
+            "fecharegistro": "2017-12-20 12:22:03",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a56a6766701.42226263": {
+            "id": "fich-5a3a56a6766701.42226263",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía: Prueba",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O PRESUPUESTOS usuariotest2 20-12\\20-12_1-prueba.jpeg",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12_1-prueba.jpeg",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a56a6238fc8.53376050",
+            "fecharegistro": "2017-12-20 12:25:10",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a56cea63053.70921878": {
+            "id": "fich-5a3a56cea63053.70921878",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía: asdf",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O PRESUPUESTOS usuariotest2 20-12\\20-12_1-asdf.jpeg",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12_1-asdf.jpeg",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a56ce522bd1.24396102",
+            "fecharegistro": "2017-12-20 12:25:50",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3a57073e8475.41443219": {
+            "id": "fich-5a3a57073e8475.41443219",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "cd5c4382-f923-42d0-ad57-31878b53ba1b",
+            "Descripcion": "Fotografía: asdf",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O PRESUPUESTOS usuariotest2 20-12\\20-12_1-asdf.jpeg",
+            "rutaLocal": ".\/tmp\/cd5c4382-f923-42d0-ad57-31878b53ba1b\/ORDENES 36802\/20-12_1-asdf.jpeg",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3a5706e3a2d8.75261854",
+            "fecharegistro": "2017-12-20 12:26:47",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3b91ce806875.32409402": {
+            "id": "fich-5a3b91ce806875.32409402",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: ",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O planos usuariotest 21-12\\21-12_1-.png",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 36802\/21-12_1-.png",
+            "tipoFichero": "planos",
+            "idSeg": "seg-5a3b91ce33a799.03281063",
+            "fecharegistro": "2017-12-21 10:49:50",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3cb5290fd487.95267943": {
+            "id": "fich-5a3cb5290fd487.95267943",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: Plano conchi",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O planos usuariotest 22-12\\22-12_1-planoc.png",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 36802\/22-12_1-planoc.png",
+            "tipoFichero": "planos",
+            "idSeg": "seg-5a3cb528b6c268.15728614",
+            "fecharegistro": "2017-12-22 07:32:57",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3cb54c6ad317.90618156": {
+            "id": "fich-5a3cb54c6ad317.90618156",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: Conchi",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O FOTOS usuariotest 22-12\\22-12_1-conchi.jpeg",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 36802\/22-12_1-conchi.jpeg",
+            "tipoFichero": "FOTOS",
+            "idSeg": "seg-5a3cb54c1139b4.94455349",
+            "fecharegistro": "2017-12-22 07:33:32",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a3cb71a3f9145.66549117": {
+            "id": "fich-5a3cb71a3f9145.66549117",
+            "IdSerie": "O",
+            "NumeroOrden": "36802",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía realizada en la visita",
+            "rutaRemota": "Z:\\ORDENES 36802\\36802O 22-12 ALBANILERIA usuariotest PRESUPUESTOS.pdf",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 36802\/22-12 ALBANILERIA usuariotest PRESUPUESTOS.pdf",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a3cb7195bd905.53797218",
+            "fecharegistro": "2017-12-22 07:41:14",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a4508fcdeb732.81433407": {
+            "id": "fich-5a4508fcdeb732.81433407",
+            "IdSerie": "O",
+            "NumeroOrden": "37371",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: 2",
+            "rutaRemota": "Z:\\ORDENES 37371\\37371O FOTOS usuariotest 28-12\\28-12_1-2.jpeg",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 37371\/28-12_1-2.jpeg",
+            "tipoFichero": "FOTOS",
+            "idSeg": "seg-5a4508fc486a31.38152854",
+            "fecharegistro": "2017-12-28 15:08:44",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a46090d22c8e4.98725213": {
+            "id": "fich-5a46090d22c8e4.98725213",
+            "IdSerie": "O",
+            "NumeroOrden": "37627",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: Cocina",
+            "rutaRemota": "Z:\\ORDENES 37627\\37627O planos usuariotest 29-12\\29-12_1-cocina.png",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 37627\/29-12_1-cocina.png",
+            "tipoFichero": "planos",
+            "idSeg": "seg-5a46090c975536.41124742",
+            "fecharegistro": "2017-12-29 09:21:17",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a46092b68f0e4.50879318": {
+            "id": "fich-5a46092b68f0e4.50879318",
+            "IdSerie": "O",
+            "NumeroOrden": "37627",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: Pasillo",
+            "rutaRemota": "Z:\\ORDENES 37627\\37627O planos usuariotest 29-12\\29-12_1-pasill.png",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 37627\/29-12_1-pasill.png",
+            "tipoFichero": "planos",
+            "idSeg": "seg-5a46092b25a6a3.21165070",
+            "fecharegistro": "2017-12-29 09:21:47",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a4609595b6703.05118914": {
+            "id": "fich-5a4609595b6703.05118914",
+            "IdSerie": "O",
+            "NumeroOrden": "37627",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: Campana",
+            "rutaRemota": "Z:\\ORDENES 37627\\37627O FOTOS usuariotest 29-12\\29-12_1-campan.jpeg",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 37627\/29-12_1-campan.jpeg",
+            "tipoFichero": "FOTOS",
+            "idSeg": "seg-5a460958c645d9.21166641",
+            "fecharegistro": "2017-12-29 09:22:33",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a4609f75f4cf7.81021668": {
+            "id": "fich-5a4609f75f4cf7.81021668",
+            "IdSerie": "O",
+            "NumeroOrden": "37627",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía realizada en la visita",
+            "rutaRemota": "Z:\\ORDENES 37627\\37627O 29-12 ALBANILERIA usuariotest PRESUPUESTOS.pdf",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 37627\/29-12 ALBANILERIA usuariotest PRESUPUESTOS.pdf",
+            "tipoFichero": "PRESUPUESTOS",
+            "idSeg": "seg-5a4609f65e2440.77208311",
+            "fecharegistro": "2017-12-29 09:25:11",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a4b41e57d97d9.93550156": {
+            "id": "fich-5a4b41e57d97d9.93550156",
+            "IdSerie": "O",
+            "NumeroOrden": "37627",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: Entrada",
+            "rutaRemota": "Z:\\ORDENES 37627\\37627O FOTOS usuariotest 2-1\\2-1_1-entrad.jpeg",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 37627\/2-1_1-entrad.jpeg",
+            "tipoFichero": "FOTOS",
+            "idSeg": "seg-5a4b41e4d56f65.61744936",
+            "fecharegistro": "2018-01-02 08:25:09",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a4b4213afc6d8.56029706": {
+            "id": "fich-5a4b4213afc6d8.56029706",
+            "IdSerie": "O",
+            "NumeroOrden": "37627",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: ",
+            "rutaRemota": "Z:\\ORDENES 37627\\37627O FOTOS usuariotest 2-1\\2-1_1-.jpeg",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 37627\/2-1_1-.jpeg",
+            "tipoFichero": "FOTOS",
+            "idSeg": "seg-5a4b421326d7f8.95490559",
+            "fecharegistro": "2018-01-02 08:25:55",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a4b4213e90657.56609020": {
+            "id": "fich-5a4b4213e90657.56609020",
+            "IdSerie": "O",
+            "NumeroOrden": "37627",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: ",
+            "rutaRemota": "Z:\\ORDENES 37627\\37627O FOTOS usuariotest 2-1\\2-1_2-.jpeg",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 37627\/2-1_2-.jpeg",
+            "tipoFichero": "FOTOS",
+            "idSeg": "seg-5a4b421326d7f8.95490559",
+            "fecharegistro": "2018-01-02 08:25:55",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a4b42143592c4.98483449": {
+            "id": "fich-5a4b42143592c4.98483449",
+            "IdSerie": "O",
+            "NumeroOrden": "37627",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: ",
+            "rutaRemota": "Z:\\ORDENES 37627\\37627O FOTOS usuariotest 2-1\\2-1_3-.jpeg",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 37627\/2-1_3-.jpeg",
+            "tipoFichero": "FOTOS",
+            "idSeg": "seg-5a4b421326d7f8.95490559",
+            "fecharegistro": "2018-01-02 08:25:56",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    },
+    {
+        "fich-5a4b42147c8121.85887453": {
+            "id": "fich-5a4b42147c8121.85887453",
+            "IdSerie": "O",
+            "NumeroOrden": "37627",
+            "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+            "Descripcion": "Fotografía: ",
+            "rutaRemota": "Z:\\ORDENES 37627\\37627O FOTOS usuariotest 2-1\\2-1_4-.jpeg",
+            "rutaLocal": ".\/tmp\/17bfc945-9b18-4fd7-82fa-4d95f04cbd51\/ORDENES 37627\/2-1_4-.jpeg",
+            "tipoFichero": "FOTOS",
+            "idSeg": "seg-5a4b421326d7f8.95490559",
+            "fecharegistro": "2018-01-02 08:25:56",
+            "Gestionado": false,
+            "Admin": ""
+        }
+    }
+]

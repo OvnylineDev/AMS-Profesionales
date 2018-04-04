@@ -1,0 +1,60 @@
+
+<script src="./resources/rtf-html-rtf/html-rtf.js"></script>
+<script src="./resources/rtf-html-rtf/rtf-html.js"></script>
+
+
+//Error 0 - Opción no conocida
+//Error 1 - Base de datos
+     login - pendiente - completado
+//Error 2 - La búsqueda da varios resultados
+//Error 3 - Datos de acceso erróneos
+//Error 4 - La búsqueda no da resultados
+//Error 5 - No hay expedientes que mostrar
+     pendiente - completado
+//Error 6 - No hay datos
+
+
+localStorage.length = 0 ||
+
+
+/ORDENES 36802
+
+
+'subirarch'
+'crearparte'
+
+272dd9f801
+5db655c116
+41f72cba96
+68f03a0308
+d9c9a8e683
+
+2bff41425a
+6ea1fe205c
+bc09bd54d8
+5974abb731
+38c789bcac
+f12bbf8a69
+c54ae3f732
+db22c1fedd
+888193d764
+6227e93f4c
+b065cef72e
+be2b58ba55
+39902e494e
+a1dc22504c
+6efd58a900
+d4dbf0d742
+227e5f2d68
+9661229225
+368de04c93
+f1e4f9a47e
+17114edf67
+8496831d6a
+bb0eda8ad8
+bf3c2a4cac
+3db731e462
+d5e11f8645
+6a339ca593
+fb2b8805ae
+34db010278

@@ -1,0 +1,32 @@
+{
+     "seg-5a33ce896abda9.15210551": {
+         "id": "seg-5a33ce896abda9.15210551",
+         "IdSerie": "O",
+         "NumeroOrden": "36802",
+         "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+         "Fecha": "2017-12-15 13:30:49",
+         "Observaciones": "El operario ha a\u00f1adido las siguientes anotaciones: asdf.",
+         "Gestionado": false,
+         "Admin": ""
+     },
+     "seg-5a33ceb7a67797.49380784": {
+         "id": "seg-5a33ceb7a67797.49380784",
+         "IdSerie": "O",
+         "NumeroOrden": "36802",
+         "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+         "Fecha": "2017-12-15 13:31:35",
+         "Observaciones": "El operario ha a\u00f1adido las siguientes anotaciones: asdf.",
+         "Gestionado": false,
+         "Admin": ""
+     },
+     "seg-5a33cec9361f86.51898225": {
+         "id": "seg-5a33cec9361f86.51898225",
+         "IdSerie": "O",
+         "NumeroOrden": "36802",
+         "IdOperario": "17bfc945-9b18-4fd7-82fa-4d95f04cbd51",
+         "Fecha": "2017-12-15 13:31:53",
+         "Observaciones": "El operario ha a\u00f1adido las siguientes anotaciones: asdf.",
+         "Gestionado": false,
+         "Admin": ""
+     }
+}

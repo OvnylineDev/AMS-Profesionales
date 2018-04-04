@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es-ES">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Last-Modified" content="0">
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>Gestión de Intervenciones 1.0</title>
+	<script src="./resources/js/jq.js"></script>
+
+	<script src="./resources/js/gv.js"></script>
+	<script src="./resources/js/sp.js"></script>
+
+	<link href="./resources/css/w3.css" rel="stylesheet">
+	<link href="./resources/css/style.css" rel="stylesheet">
+	<link href="./resources/fa/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body class="w3-large">
+	<div id="top" class="w3-padding-large w3-large w3-red">
+		<div id="titulo">
+
+		</div>
+		<div id="login">
+			<a class="opt" destino="principal.html"><i class="fa fa-list" aria-hidden="true"></i></a>
+			<a class="opt" destino="fest-general.html"><i class="fa fa-file-text-o " aria-hidden="true"></i></a>
+			<a class="opt" destino="reload"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+			<a class="opt" destino="index.html"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+		</div>
+	</div>
+	<div id="info" class="w3-padding-large w3-border">
+
+	</div>
+	<div class="w3-padding-large">
+
+		<div id="navegador" class="w3-cell-row w3-center" style="width:100%">
+			<div class="topnav" id="sections">
+				<a class="sect" destino="fest-general.html"><i class="fa fa-undo" aria-hidden="true"></i> Volver</a>
+			</div>
+		</div>
+
+		<div id="contenedor_items" class="w3-padding-large w3-center w3-small">
+
+			<div class="w3-grey w3-round w3-padding w3-btn" style="width:100%;margin-bottom:16px">
+				<div class="w3-cell-row">
+					<div id="listado" class="w3-cell w3-mobile w3-left w3-container">
+						<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+						<span>Cargando datos...</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="seg_data" class="w3-light-grey w3-round w3-padding modal" style="width:100%;margin-bottom:16px;overflow: hidden">
+		<div class="campo">
+			<span class='close'><i class='fa fa-times fa-2x' aria-hidden='true'></i></span>
+			<h4>Datos del registro seleccionado</h4>
+			<div class="w3-cell-row w3-mobile w3-container">
+				<i class="fa fa-calendar" aria-hidden="true"></i> Fecha Registro:<span id="fechareg"></span>
+			</div>
+			<div class="w3-cell-row w3-mobile w3-container">
+				Observaciones
+				<textarea id="textseg" class="textfield " cols="30" rows="8" readonly></textarea>
+			</div>
+		</div>
+	</div>
+	<script>
+		var token = "";
+		var idIncidencia = "";
+
+		$(document).ready(function() {
+
+			//recoger parámetros
+			token = gv_get_URL_parameter("token");
+
+			if (localStorage.length = 0 ||
+				token === null || token === undefined || token == "") {
+				logout(token,localStorage.getItem(LOCALIDOP));
+			}
+
+			//rellenar página con parámetros
+			$("#titulo").html("HISTORIAL INCIDENCIAS URGENTES");
+
+			//realizar búsquedas y mostrarlas
+			if (navigator.onLine) {
+				var params = {
+					"op": "seguiurg",
+					"token": token,
+					"idOperario": localStorage.getItem(LOCALIDOP)
+				};
+
+				$.ajax({
+					url: APIURL,
+					data: params, //parámetros pasados
+					type: 'POST',
+					dataType: "json",
+					crossDomain: true,
+					success: function(jsonrespuesta) {
+						// var jsonrespuesta=jQuery.parseJSON(respuesta);
+
+						if (jsonrespuesta.status == "KO") {
+							switch (jsonrespuesta.error) {
+								case "1":
+									$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>Error de base de datos: ' + jsonrespuesta.message + '.');
+									break;
+								case "4":
+									$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>No hay seguimientos introducidos de dicho expediente.');
+									break;
+								case "99":
+								     logout(token,localStorage.getItem(LOCALIDOP));
+								     break;
+								default:
+									$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación');;
+
+							}
+						}
+						if (jsonrespuesta.status == "OK") {
+
+							$("#contenedor_items").html("");
+
+							var items = jsonrespuesta.incid;
+
+							for (var i = 0; i < items.length; i++) {
+								var html ="";
+
+								html = html + '\
+									<div id="inci_' + i + '" style="width:100%;margin-bottom:16px"> \
+										<div id="' + limpiarID(items[i]) + '" class="btnacc w3-grey w3-round w3-padding w3-btn w3-cell-row" style="margin-bottom:5px">\
+											<div class="w3-cell w3-mobile w3-left w3-container">\
+												<i class="fa fa-arrow-right" aria-hidden="true"></i> ' + items[i] + '\
+											</div>\
+										</div>\
+										<div class="accordion w3-hide">\
+										</div>\
+									</div>';
+
+								$("#contenedor_items").append(html);
+							}
+
+							$.each(jsonrespuesta.items, function(i, item) {
+								var id = (item.id) ? item.id : "";
+								var idIncidencia = (item.idIncidencia != null) ? item.idIncidencia : "";
+								var IdOperario = (item.IdOperario != null) ? item.IdOperario : "";
+								var Fecha = (item.Fecha != null) ? item.Fecha : "sin definir";
+								var date = item.date;
+								var Observaciones = (item.Observaciones != null) ? item.Observaciones.toUpperCase() : "sin definir";
+
+								var section = "#" + limpiarID(idIncidencia) + " + .accordion";
+
+								var html = $(section).html();
+
+								// console.log(html);
+
+								html = html + '<div id="item_' + i + '" class="w3-grey w3-round w3-padding w3-btn" style="width:90%; margin-bottom:1px"> \
+										<div class="w3-cell-row">\
+											<div class="w3-cell w3-mobile w3-left w3-container">';
+
+								if (Observaciones.indexOf(("llamada").toUpperCase()) != -1) {
+									html = html + '<i class="fa fa-phone" aria-hidden="true"></i> ';
+								}else if (Observaciones.indexOf(("anotaciones").toUpperCase()) != -1) {
+									html = html + '<i class="fa fa-sticky-note" aria-hidden="true"></i> ';
+								}else if (Observaciones.indexOf(FILEFIRMA.toUpperCase()) != -1) {
+									html = html + '<i class="fa fa-clock-o" aria-hidden="true"></i> ';
+								}else if (Observaciones.indexOf(FILEFOTO.toUpperCase()) != -1)  {
+									html = html + '<i class="fa fa-picture-o" aria-hidden="true"></i> ';
+								}else if (Observaciones.indexOf(FILEPLAN.toUpperCase()) != -1)  {
+									html = html + '<i class="fa fa-map" aria-hidden="true"></i> ';
+								}else if (Observaciones.indexOf(FILEVAL.toUpperCase()) != -1)  {
+									html = html + '<i class="fa fa-money" aria-hidden="true"></i> ';
+								}else if (Observaciones.indexOf(FILEPARTE.toUpperCase()) != -1)  {
+									html = html + '<i class="fa fa-file" aria-hidden="true"></i> ';
+								}else if (Observaciones.indexOf(FILEPARTEA.toUpperCase()) != -1)  {
+									html = html + '<i class="fa fa-file" aria-hidden="true"></i> ';
+								}else{
+									html = html + '<i class="fa fa-clock-o" aria-hidden="true"></i> ';
+								}
+
+								html = html + '<span class="w3-small">' + Fecha + '</span>' + ' <i class="fa fa-arrow-right" aria-hidden="true"></i> ' + Observaciones.substr(0, 60) + '...';
+								html = html +	'</div></div></div>';
+
+								// console.log(i + " " + section);
+								$(section).html(html);
+							});
+
+							$.each(jsonrespuesta.items, function(i, item) {
+								var id = (item.id) ? item.id : "";
+								var idSerie = (item.idSerie != null) ? item.idSerie : "";
+								var numeroOrden = (item.numeroOrden != null) ? item.numeroOrden : "";
+								var IdOperario = (item.IdOperario != null) ? item.IdOperario : "";
+								var Fecha = (item.Fecha != null) ? item.Fecha : "sin definir";
+								var Observaciones = (item.Observaciones != null) ? item.Observaciones.toUpperCase() : "sin definir";
+
+								$("#item_" + i).on("click", {
+									// "token":encodeURIComponent(token),
+									// "idSerie":encodeURIComponent(idSerie),
+									// "numeroOrden":encodeURIComponent(numeroOrden),
+									// "IdOperario":encodeURIComponent(IdOperario),
+									"fecha": Fecha,
+									"observaciones": Observaciones
+								}, function(evento) {
+
+									$("#fechareg").html("<br />" + evento.data.fecha);
+
+									// $("#textseg").val(convertToPlain(evento.data.observaciones));
+									$("#textseg").val(evento.data.observaciones);
+
+									$("#seg_data").show();
+								});
+							});
+						}
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Error de acceso. El servidor no responde.');
+					},
+				});
+			}else{ //navigator
+				$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.');
+			}
+
+			$("#login > .opt").click(function() {
+				setDestinoTop($(this).attr('destino'));
+			});
+
+			$("#navegador > #sections > .sect").click(function() {
+				setDestinoInci($(this).attr('destino'));
+			});
+
+			$(".close").click(function() {
+				$(this).parent(".campo").parent(".modal").hide();
+			});
+		});
+
+		$(document).on("click", '.btnacc', function(event) {
+			if($(this).siblings(".accordion").hasClass("w3-hide")){
+				$(".accordion").addClass('w3-hide');
+				$(this).siblings(".accordion").removeClass('w3-hide');
+			}else{
+				$(this).siblings(".accordion").addClass('w3-hide');
+			}
+		});
+
+		function limpiarID(item){
+			// var aux = item.replace("INCI_", "");
+			// aux = aux.replace(".", "");
+			return item.replace(".", "");
+		}
+	</script>
+</body>
+
+</html>
