@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es-ES">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Last-Modified" content="0">
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>Gestión de Intervenciones 1.0</title>
+	<script src="./resources/js/jq.js"></script>
+
+	<script src="./resources/js/gv.js"></script>
+	<link href="./resources/css/w3.css" rel="stylesheet">
+	<link href="./resources/css/style.css" rel="stylesheet">
+	<link href="./resources/fa/css/font-awesome.css" rel="stylesheet">
+	<style>
+		* {
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			outline: none;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+
+<body class="w3-large">
+	<div id="top" class="w3-padding-large w3-large w3-red">
+		<div id="titulo">
+
+		</div>
+		<div id="login">
+			<a class="opt" destino="principal.html"><i class="fa fa-list" aria-hidden="true"></i></a>
+			<a class="opt" destino="fest-general.html"><i class="fa fa-file-text-o " aria-hidden="true"></i></a>
+			<a class="opt" destino="reload"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+			<a class="opt" destino="index.html"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+		</div>
+	</div>
+	<div id="info" class="w3-padding-large w3-border">
+
+	</div>
+	<div id="contenedor_items" class="w3-padding-large">
+
+		<div class="w3-grey w3-round w3-padding w3-btn" style="width:100%;margin-bottom:16px">
+			<div class="w3-cell-row">
+				<div id="listado" class="w3-cell w3-mobile w3-left w3-container">
+					<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+					<span>Cargando datos...</span>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		var token = "";
+		var tipo = "";
+
+		$(document).ready(function() {
+
+			token = gv_get_URL_parameter("token");
+			tipo = gv_get_URL_parameter("tipo");
+			usuario = localStorage.getItem(LOCALUSER);
+			id = localStorage.getItem(LOCALIDOP);
+
+			if (localStorage.length = 0 || token === undefined || tipo === undefined || token == "" || tipo == "") {
+				logout(token,localStorage.getItem(LOCALIDOP));
+			}
+
+			if (tipo === TIPOEXPPEND || tipo === TIPOEXPCOMP) {
+				$("#titulo").html("LISTADO DE EXPEDIENTES " + tipo.toUpperCase() + "S");
+				if (navigator.onLine) {
+
+					var params = {
+						"op": tipo,
+						"id": id,
+						"token": token
+					};
+
+					$.ajax({
+						url: APIURL,
+						data: params, //parámetros pasados
+						type: 'POST',
+						dataType: "json",
+						crossDomain: true,
+						success: function(jsonrespuesta) {
+							// var jsonrespuesta=jQuery.parseJSON(respuesta);
+
+							if (jsonrespuesta.status == "KO") {
+								switch (jsonrespuesta.error) {
+									case "1":
+										$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> No se puede recuperar la información. Intentar más tarde.');
+										break;
+									case "4":
+										$("#listado").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> ' + jsonrespuesta.message);
+										break;
+
+									case "99":
+										logout(token,localStorage.getItem(LOCALIDOP));
+										break;
+									default:
+										$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación');;
+								}
+							}
+							if (jsonrespuesta.status == "OK") {
+
+								var html = "";
+
+								$.each(jsonrespuesta.items, function(i, item) {
+									var idexp = (item.id != null) ? item.id : "";
+									// var urgente = (item.urgente) ? "urgente " : "";
+									var idSerie = (item.idSerie != null) ? item.idSerie : "";
+									var numeroOrden = (item.numeroOrden != null) ? item.numeroOrden : "";
+									var numeroExpediente = (item.numeroExpediente != null) ? item.numeroExpediente : "";
+									var fechaCita = (item.fechaCita != null) ? item.fechaCita : "sin definir";
+									var direccion = (item.direccion != null) ? item.direccion : "sin definir";
+									var localidad = (item.localidad != null) ? item.localidad : "";
+									var codigoPostal = (item.codigoPostal != null) ? item.codigoPostal : "";
+									var telefono = (item.telefono != null) ? item.telefono : "sin definir";
+									var contacto = (item.contacto != null) ? item.contacto : "sin definir";
+
+									html = html + '\
+									<div id="item_' + i + '" class="w3-grey w3-round w3-padding w3-btn exp" style="width:100%;margin-bottom:16px" \
+											idexp="' + idexp + '" idSerie="' + idSerie + '" numeroOrden="' + numeroOrden + '" > \
+										<div class="w3-cell-row"> \
+											<div class="w3-cell-row w3-mobile w3-left w3-container"> \
+												<i class="fa fa-folder-open-o" aria-hidden="true"></i> ' +
+											idSerie + " " + numeroOrden + " " + numeroExpediente + '\
+											</div> \
+											<div class="w3-cell-row w3-mobile w3-left w3-container"> \
+												<i class="fa fa-calendar" aria-hidden="true"></i> ' + fechaCita +
+											'\
+											</div>\
+										</div>\
+										<div class="w3-cell-row w3-padding-16">\
+											<div class="w3-cell-row w3-mobile w3-left w3-container">\
+												<i class="fa fa-map-marker" aria-hidden="true"></i> ' + direccion +
+											" <br /> " + localidad + " | " + codigoPostal + ' \
+											</div> \
+											<div class="w3-cell-row w3-mobile w3-left w3-container"> \
+												<i class="fa fa-phone-square" aria-hidden="true"></i> ' + telefono +
+											'\
+											</div> \
+											<div class="w3-cell-row w3-mobile w3-left w3-container"> \
+												<i class="fa fa-user-circle" aria-hidden="true"></i> ' + contacto + '\
+											</div> \
+										</div> \
+									</div> \
+									';
+									$("#contenedor_items").html(html);
+								});
+							}
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+							$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Error de acceso. El servidor no responde.');
+						},
+					});
+				}else{ //navigator
+					$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.');
+				}
+			} else {
+				$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Tipo de expediente no reconocido.');
+			}
+
+			$("#login > .opt").click(function() {
+				setDestinoTop($(this).attr('destino'));
+			});
+
+		});
+
+		$(document).on("click", '.exp', function(event) {
+			if (tipo === TIPOEXPPEND) {
+				localStorage.setItem(LOCALIDEXPEST, $(this).attr('idexp'));
+
+				window.location.href = "llamada.html?token=" + token +
+					"&idSerie=" + $(this).attr('idSerie') +
+					"&numeroOrden=" + $(this).attr('numeroOrden');
+			}
+		});
+	</script>
+</body>
+
+</html>

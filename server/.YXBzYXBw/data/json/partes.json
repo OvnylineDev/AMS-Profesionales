@@ -1,0 +1,227 @@
+[
+    {
+        "CA": {
+            "id": "CA",
+            "fichero": "albanil.html",
+            "generico": false,
+            "tipoAMS": "CITADA ALBAÑILERIA",
+            "ficheroAMS": "PARTE ALBAÑILERIA"
+        }
+    },
+    {
+        "ALU": {
+            "id": "ALU",
+            "fichero": "aluminio.html",
+            "generico": false,
+            "tipoAMS": "ALUMINIO",
+            "ficheroAMS": "PARTE ALUMINIO"
+        }
+    },
+    {
+        "CM": {
+            "id": "CM",
+            "fichero": "aluminio.html",
+            "generico": false,
+            "tipoAMS": "CARPINTERIA METALICA",
+            "ficheroAMS": "PARTE ALUMINIO"
+        }
+    },
+    {
+        "CARP": {
+            "id": "CARP",
+            "fichero": "carpintero.html",
+            "generico": false,
+            "tipoAMS": "CARPINTERIA",
+            "ficheroAMS": "PARTE CARPINTERIA"
+        }
+    },
+    {
+        "CN": {
+            "id": "CN",
+            "fichero": "cerrajero.html",
+            "generico": false,
+            "tipoAMS": "CERRAJERO NACHO",
+            "ficheroAMS": "PARTE CERRAJERIA"
+        }
+    },
+    {
+        "CAL": {
+            "id": "CAL",
+            "fichero": "cerrajero.html",
+            "generico": false,
+            "tipoAMS": "CERRAJERO ALBERTO",
+            "ficheroAMS": "PARTE CERRAJERIA"
+        }
+    },
+    {
+        "CE": {
+            "id": "CE",
+            "fichero": "cerrajero.html",
+            "generico": false,
+            "tipoAMS": "CERRAJERIA",
+            "ficheroAMS": "PARTE CERRAJERIA"
+        }
+    },
+    {
+        "AVI": {
+            "id": "AVI",
+            "fichero": "cristalero.html",
+            "generico": false,
+            "tipoAMS": "CRISTALERIA AVILA SUR",
+            "ficheroAMS": "PARTE CRISTALERIA"
+        }
+    },
+    {
+        "CRIS": {
+            "id": "CRIS",
+            "fichero": "cristalero.html",
+            "generico": false,
+            "tipoAMS": "CRISTALERIA",
+            "ficheroAMS": "PARTE CRISTALERIA"
+        }
+    },
+    {
+        "ELEC": {
+            "id": "ELEC",
+            "fichero": "electricista.html",
+            "generico": false,
+            "tipoAMS": "ELECTRICIDAD",
+            "ficheroAMS": "PARTE ELECTRICIDAD"
+        }
+    },
+    {
+        "PARQ": {
+            "id": "PARQ",
+            "fichero": "parquet.html",
+            "generico": false,
+            "tipoAMS": "PARQUET",
+            "ficheroAMS": "PARTE PARQUET"
+        }
+    },
+    {
+        "EP": {
+            "id": "EP",
+            "fichero": "pintor.html",
+            "generico": false,
+            "tipoAMS": "EXTREDECO PINTOR",
+            "ficheroAMS": "PARTE PINTURA"
+        }
+    },
+    {
+        "EXTR": {
+            "id": "EXTR",
+            "fichero": "pintor.html",
+            "generico": false,
+            "tipoAMS": "PINTURA JAVI EXTREDECO",
+            "ficheroAMS": "PARTE PINTURA"
+        }
+    },
+    {
+        "CP": {
+            "id": "CP",
+            "fichero": "pintor.html",
+            "generico": false,
+            "tipoAMS": "CITADA PINTURA",
+            "ficheroAMS": "PARTE PINTURA"
+        }
+    },
+    {
+        "CF": {
+            "id": "CF",
+            "fichero": "fontanero.html",
+            "generico": false,
+            "tipoAMS": "CITADA FONTANERIA",
+            "ficheroAMS": "PARTES FONTANEROS"
+        }
+    },
+    {
+        "FMA": {
+            "id": "FMA",
+            "fichero": "fontanero.html",
+            "generico": false,
+            "tipoAMS": "FONTA MANUEL",
+            "ficheroAMS": "PARTES FONTANEROS"
+        }
+    },
+    {
+        "FSA": {
+            "id": "FSA",
+            "fichero": "fontanero.html",
+            "generico": false,
+            "tipoAMS": "FONTA SATUR",
+            "ficheroAMS": "PARTES FONTANEROS"
+        }
+   },
+    {
+        "RC": {
+            "id": "RC",
+            "fichero": "generico.html",
+            "generico": true,
+            "tipoAMS": "REVISION CONCHI",
+            "ficheroAMS": "MOD.SUPERVISION CONCHI 2"
+        }
+    },
+    {
+        "EN": {
+            "id": "PEN",
+            "fichero": "generico.html",
+            "generico": true,
+            "tipoAMS": "PARTE ENCARGADO",
+            "ficheroAMS": "PARTE ENCARGADO CONCHI"
+        }
+    },
+    {
+        "PEN": {
+            "id": "PEN",
+            "fichero": "generico.html",
+            "generico": true,
+            "tipoAMS": "PARTE ENCARGADO",
+            "ficheroAMS": "PARTE ENCARGO MATERIALES"
+        }
+    },
+    {
+        "GB": {
+            "id": "GB",
+            "fichero": "generico.html",
+            "generico": true,
+            "tipoAMS": "GAMA BLANCA",
+            "ficheroAMS": "PARTE GAMA BLANCA"
+        }
+    },
+    {
+        "5da31d97-5967-4631-8d14-241785b1a073": {
+            "id": "5da31d97-5967-4631-8d14-241785b1a073",
+            "fichero": "generico.html",
+            "generico": true,
+            "tipoAMS": "JARDINERIA",
+            "ficheroAMS": "PARTE JARDINERIA"
+        }
+    },
+    {
+        "f9a994b4-83ff-4515-b1b8-0c752b43ae70": {
+            "id": "f9a994b4-83ff-4515-b1b8-0c752b43ae70",
+            "fichero": "generico.html",
+            "generico": true,
+            "tipoAMS": "LIMPIEZA",
+            "ficheroAMS": "PARTE LIMPIEZA"
+        }
+    },
+    {
+        "67785876-7d8f-41e1-bd5d-840539616137": {
+            "id": "67785876-7d8f-41e1-bd5d-840539616137",
+            "fichero": "generico.html",
+            "generico": true,
+            "tipoAMS": "PERSIANAS",
+            "ficheroAMS": "PARTE PERSIANAS"
+        }
+    },
+    {
+        "e9c35a5d-5e27-44ad-a4f6-a4ecbd876638": {
+            "id": "e9c35a5d-5e27-44ad-a4f6-a4ecbd876638",
+            "fichero": "generico.html",
+            "generico": true,
+            "tipoAMS": "TOLDOS",
+            "ficheroAMS": "PARTE TOLDOS"
+        }
+    }
+]

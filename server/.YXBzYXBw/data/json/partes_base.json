@@ -1,0 +1,82 @@
+[
+    {
+        "ALBA": {
+            "id": "ALBA",
+            "nombre": "Albañilería",
+            "fichero": "albanil.html",
+            "ficheroAMS": "PARTE ALBAÑILERIA"
+        }
+    },
+    {
+        "FONTA": {
+            "id": "FONTA",
+            "nombre": "Fontanería",
+            "fichero": "fontanero.html",
+            "ficheroAMS": "PARTE FONTANERIA"
+        }
+    },
+    {
+        "ALUM": {
+            "id": "ALU",
+            "nombre": "Aluminio",
+            "fichero": "aluminio.html",
+            "ficheroAMS": "PARTE ALUMINIO"
+        }
+    },
+    {
+        "CARP": {
+            "id": "CARP",
+            "nombre": "Carpintería",
+            "fichero": "carpintero.html",
+            "ficheroAMS": "PARTE CARPINTERIA"
+        }
+    },
+    {
+        "CERR": {
+            "id": "CERRA",
+            "nombre": "Cerrajero",
+            "fichero": "cerrajero.html",
+            "ficheroAMS": "PARTE CERRAJERIA"
+        }
+    },
+    {
+        "CRIS": {
+            "id": "CRIS",
+            "nombre": "Cristalería",
+            "fichero": "cristalero.html",
+            "ficheroAMS": "PARTE CRISTALERIA"
+        }
+    },
+    {
+        "ELEC": {
+            "id": "ELEC",
+            "nombre": "Electricidad",
+            "fichero": "electricista.html",
+            "ficheroAMS": "PARTE ELECTRICIDAD"
+        }
+    },
+    {
+        "PARQ": {
+            "id": "PARQ",
+            "nombre": "Parquet",
+            "fichero": "parquet.html",
+            "ficheroAMS": "PARTE PARQUET"
+        }
+    },
+    {
+        "PINT": {
+            "id": "PINT",
+            "nombre": "Pintor",
+            "fichero": "pintor.html",
+            "ficheroAMS": "PARTE PINTURA"
+        }
+    },
+    {
+        "GEN": {
+            "id": "GEN",
+            "nombre": "Genérico",
+            "fichero": "generico.html",
+            "ficheroAMS": ""
+        }
+    }
+]

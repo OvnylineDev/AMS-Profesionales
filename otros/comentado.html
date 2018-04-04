@@ -1,0 +1,118 @@
+--index.html
+
+// $.post('http://amsapp.turisapp.es/.YXBzYXBw/api.php', params)
+// 	.done(function(jsonrespuesta){
+//
+// 	// var jsonrespuesta=jQuery.parseJSON(respuesta);
+//
+// 	if(jsonrespuesta.estado=="KO"){
+//
+// 		$("#info_acceso").html("usuario o clave no válidos.");
+// 	}
+// 	if(jsonrespuesta.estado=="OK"){
+//
+// 		if(typeof(Storage) !== "undefined") {
+//
+// 			localStorage.setItem("gv_usuario", usuario);
+// 			localStorage.setItem("gv_clave", clave);
+// 			localStorage.setItem("gv_time", new Date().getTime());
+// 			//valorar posibilidad de guardar un timestamp para pedir cada x tiempo un acceso con clave.
+//
+// 		} else {
+//
+// 			alert("Su dispositivo no permite guardar el inicio de sesión, deberá introducir su usuario y clave en cada acceso");
+// 		}
+//
+// 		window.location.href="principal.html?token="+jsonrespuesta.token;
+// 		// el json de respuesta debe emitir un token de sesión que se pasa como parámetro a cada página para realizar las llamadas, se recupera con la funcion gv_get_URL_parameter(sParam)
+//
+// 	}
+//
+// }).fail(function(){
+//
+// 	$("#info_acceso").html("Error de acceso. El servidor no responde.");
+//
+// });
+
+
+$.ajax({
+		url: APIURL,
+		data: params,//parámetros pasados
+		type: 'POST',
+		dataType : "json",
+		crossDomain: true,
+    		//contentType: "application/json; charset=utf-8",
+		//contentType: false,
+		//encode: true,
+		//processData: false,
+		//traditional: true,
+		success: function(jsonrespuesta) {
+			// $("#info_acceso").html(data.status);
+			// var jsonrespuesta=jQuery.parseJSON(data);
+
+			if(jsonrespuesta.status=="KO"){
+				$("#info_acceso").html("usuario o clave no válidos.");
+			}
+			if(jsonrespuesta.status=="OK"){
+
+				if(typeof(Storage) !== "undefined") {
+
+					localStorage.setItem(LOCAL["USER"], usuario);
+					localStorage.setItem(LOCAL["PASS"], clave);
+					localStorage.setItem(LOCAL["IDOP"], jsonrespuesta.id);
+					localStorage.setItem(LOCAL["TIMEACC"], new Date().getTime());
+					//valorar posibilidad de guardar un timestamp para pedir cada x tiempo un acceso con clave.
+
+				} else {
+					alert("Su dispositivo no permite guardar el inicio de sesión, deberá introducir su usuario y clave en cada acceso");
+				}
+
+				window.location.href="principal.html?token="+jsonrespuesta.token;
+				// el json de respuesta debe emitir un token de sesión que se pasa como parámetro a cada página para realizar las llamadas, se recupera con la funcion gv_get_URL_parameter(sParam)
+			}
+		},
+		error: function(jqXHR, textStatus, errorThrown) {
+			$("#info_acceso").html("Error de acceso. El servidor no responde.");
+		},
+		// async:false,
+
+
+
+
+
+
+listado.html
+// $.post("",{"token":token,"tipo":tipo},function(respuesta){
+	//
+	// 	var jsonrespuesta=jQuery.parseJSON(respuesta);
+	//
+	// 	if(jsonrespuesta.estado=="KO"){
+	//
+	// 		$("#info").html("No se puede recuperar la información. Intentar más tarde.");
+	// 	}
+	// 	if(jsonrespuesta.estado=="OK"){
+	//
+	// 		var html="";
+	//
+	// 		for(i=0;i<jsonrespuesta.items;i++) //recorremos el array de elementos devueltos para pintarlos
+	// 		{
+	// 			html="";
+	// 			html=html+'';
+	// 			$("#contenedor_items").append(html);
+	//
+	// 			$("#numeroitem").on("click",{"token":token,"expediente":jsonrespuesta.items[i].expediente},function(evento){
+	//
+	// 				window.location.href="expediente.html?token="+evento.data.token+"&exp="+evento.data.expediente;
+	//
+	// 			});
+	// 		}
+	//
+	//
+	//
+	// 	}
+	//
+	// }).fail(function(){
+	//
+	// 	$("#info").html("Error de acceso. El servidor no responde.");
+	//
+	// });

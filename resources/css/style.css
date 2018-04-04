@@ -1,0 +1,292 @@
+*{
+     -webkit-tap-highlight-color: rgba(0,0,0,0);
+     outline: none;
+     box-sizing: border-box;
+     text-transform: uppercase!important;
+}
+
+@media screen and (min-width: 858px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 702px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 724px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 623px) {
+    html {
+        font-size: 8px;
+    }
+    .modal *,
+    #incidencias *,
+    #selparte *{
+        font-size: 2.5vw;
+    }
+    #parte *{
+        font-size: 2vw;
+    }
+    #firma{
+        width: 300px;
+        height: 150px
+    }
+    #firmanota{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .tools {
+        display: none!important;;
+    }
+
+    /* #desktop button{
+         margin: 0 10px;
+    } */
+}
+
+@media screen and (max-width: 724px) {
+    #parte{
+        word-break: break-all;
+    }
+}
+
+.exp{
+     white-space: pre-line;
+}
+
+#send{
+	z-index: 999;
+}
+
+#phone .fa-circle{
+	color: green;
+}
+#phonecall .fa-circle{
+	color: red;
+}
+
+.fa-rotate-135{
+	transform: rotate(135deg);
+}
+
+.radiob label{
+    margin-right: 50px;
+    margin-left: 10px;
+}
+
+.modal{
+	display: none;
+	width: 90%!important;
+	height: 400px;
+	position: fixed;
+	top: 50px;
+	margin: 0 20px;
+     border: 2px solid #000;
+}
+
+.modal h4{
+    width:95%
+}
+
+.modal .campo{
+	position: relative;
+}
+
+.modal .campo .close{
+	position: absolute;
+     right:0;
+}
+
+.textfield {
+	width: 100%;
+	height: 200px;
+	font-family: sans-serif-medium;
+	font-size: 14pt;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+
+#imagesel div{
+   display: inline-block;
+   position: relative;
+   margin: 10px;
+}
+
+#imagesel div i{
+   position: absolute;
+   background-color: #fff;
+}
+
+#imagesel div .textfield{
+   display: inline;
+   vertical-align: top;
+   margin: 20px;
+   height:50px;
+   width: 50%;
+}
+
+
+#imagesel{
+   display: block;
+}
+
+#imagesel img,
+#imagesel canvas{
+     display: inline;
+     margin: 10px;
+     width:100px;
+}
+
+#imagesel span{
+     display: none;
+}
+
+#titulo{
+   text-align: center;
+}
+
+.topnav,
+#login{
+   overflow: hidden;
+   position: relative;
+   background-color: #f44336;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a,
+#login a{
+   display: block;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+}
+
+.topnav .sect:nth-child(even){
+    /* border: 1px solid #000000; */
+     background-color: rgba(0, 0, 0, 0.2);
+}
+
+.topnav .sect:nth-child(odd){
+    /* border: 1px solid #000000; */
+}
+
+/* Change the color of links on hover */
+.topnav a:hover,
+#login a:hover{
+   /*background-color: #ddd;*/
+   /*color: black;*/
+}
+
+#login{
+    text-align: center;
+    padding-top: 10px;
+}
+
+#login a{
+   display: inline;
+   padding: 0 16px;
+   margin: 0 5px;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+	display: none;
+	color: #f2f2f2;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.topnav a:not(:first-child) {
+   display: none;
+}
+
+.topnav a.icon {
+	display: block;
+}
+
+.topnav.responsive a {
+	display: block;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+#val, #firma, #firmanota{
+	display: none;
+}
+
+#firmanota{
+   width: 400px;
+}
+
+#parte *{
+    overflow: hidden;
+    word-break: keep-all;
+}
+
+#parte #NumOrden *,
+#parte #CIA *,
+#parte #NumExp *,
+#parte #Poliza *,
+#parte #Localidad *,
+#parte #CitaAseg *,
+#parte #NombAseg *,
+#parte #NIFAseg *,
+#parte #DirAseg *,
+#parte #TlfAseg1 *,
+#parte #TlfAseg2 *,
+#parte #TlfAseg3 *,
+#parte #CitaPerj *,
+#parte #NombrePerj *,
+#parte #NIFPerj *,
+#parte #DirPerj *,
+#parte #TlfPerj1 *,
+#parte #TlfPerj2 *,
+#parte #TlfPerj3 *,
+#parte #Observaciones *,
+#parte #OrigenS *,
+#parte #Repar *,
+#parte #KM *,
+#parte #HEnt *,
+#parte #HSal *,
+#parte #maq *,
+#parte #FaltaGrem *,
+#parte #grsi *,
+#parte #grno *,
+#parte #firmaR *,
+#parte #firmaC *,
+#parte #finsi *,
+#parte #finno *,
+#parte #dnifin *,
+#parte #noteFC *{
+     word-break: break-all;
+}
+
+/* #noteFC, #noteFR{
+    overflow: hidden;
+    word-break: break-all
+} */
+
+#noteFC *, #noteFR *{
+    font-size: 10px!important;
+}

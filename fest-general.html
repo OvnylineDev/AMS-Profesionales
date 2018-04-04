@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es-ES">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Last-Modified" content="0">
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>Gestión de Intervenciones 1.0</title>
+	<script src="./resources/js/jq.js"></script>
+
+	<script src="./resources/js/gv.js"></script>
+
+	<link href="./resources/css/w3.css" rel="stylesheet">
+	<link href="./resources/css/style.css" rel="stylesheet">
+	<link href="./resources/fa/css/font-awesome.css" rel="stylesheet">
+
+</head>
+
+<body class="w3-large">
+	<div id="top" class="w3-padding-large w3-large w3-red">
+		<div id="titulo">
+
+		</div>
+		<div id="login">
+			<a class="opt" destino="principal.html"><i class="fa fa-list" aria-hidden="true"></i></a>
+			<a class="opt" destino="fest-general.html"><i class="fa fa-file-text-o " aria-hidden="true"></i></a>
+			<a class="opt" destino="reload"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+			<a class="opt" destino="index.html"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+		</div>
+	</div>
+	<div id="info" class="w3-padding-large w3-border">
+
+	</div>
+	<div id="botones" class="w3-padding-large">
+		<div id="navegador" class="w3-cell-row w3-center" style="width:100%">
+			<div class="topnav" id="sections">
+				<a class="sect disabled" destino="fest-general.html">Inicio - Incidencias Urgentes</a>
+				<a class="sect" destino="fest-foto.html">Fotografías</a>
+				<a class="sect" destino="fest-planos.html">Planos/Diseños</a>
+				<a class="sect" destino="fest-parte.html">Parte Final</a>
+				<a href="javascript:void(0);" class="icon" onclick="showTopNav()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</div>
+	<div id="incidencias" class="w3-light-grey w3-center w3-round w3-padding-16" style="width:100%;margin-bottom:16px;overflow: hidden">
+		<div class="w3-cell-row">
+			<div id="nuevainc" class="w3-cell w3-green w3-block w3-center w3-btn" style="width:25%;padding-top:50px;padding-bottom:50px">
+				<i class="fa fa-check w3-xxlarge" aria-hidden="true"></i>
+				<div class="w3-padding-16"></div>
+				Nueva
+			</div>
+			<div id="historial" class="w3-cell w3-block w3-center w3-btn" style="width:15%;padding-top:50px;padding-bottom:50px">
+				<i class="fa fa-history  w3-xxlarge" aria-hidden="true"></i>
+				<div class="w3-padding-16"></div>
+				Historial
+			</div>
+			<div id="cerrarinc" class="w3-cell w3-red w3-block w3-center w3-btn" style="display:none;width:25%;padding-top:50px;padding-bottom:50px">
+				<i class="fa fa-times w3-xxlarge" aria-hidden="true"></i>
+				<div class="w3-padding-16"></div>
+				Cerrar
+			</div>
+		</div>
+		<div class="w3-cell-row">
+			<div id="foto" class="w3-cell w3-block w3-center w3-btn" style="display:none;width:25%;padding-top:50px;padding-bottom:50px">
+				<i class="fa fa-camera w3-xxlarge" aria-hidden="true"></i>
+				<div class="w3-padding-16"></div>
+				Fotografías
+			</div>
+			<div id="plano" class="w3-cell w3-block w3-center w3-btn" style="display:none;width:25%;padding-top:50px;padding-bottom:50px">
+				<i class="fa fa-paint-brush w3-xxlarge" aria-hidden="true"></i>
+				<div class="w3-padding-16"></div>
+				Planos
+			</div>
+			<div id="parte" class="w3-cell w3-block w3-center w3-btn" style="display:none;width:25%;padding-top:50px;padding-bottom:50px">
+				<i class="fa fa-file-text-o w3-xxlarge" aria-hidden="true"></i>
+				<div class="w3-padding-16"></div>
+				Parte
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var token = "";
+		var idIncidencia = "";
+
+		$(document).ready(function() {
+
+			idIncidencia = localStorage.getItem(LOCALIDINCID);
+
+			if (idIncidencia === null || idIncidencia === undefined || idIncidencia == "") {
+				$("#foto").hide();
+				$("#plano").hide();
+				$("#parte").hide();
+				$("#cerrarinc").hide();
+				$("#sep").hide();
+			}else{
+				$("#foto").show();
+				$("#plano").show();
+				$("#parte").show();
+				$("#cerrarinc").show();
+				$("#sep").show();
+			}
+
+			//recoger parámetros
+			token = gv_get_URL_parameter("token");
+
+			if (localStorage.length = 0 || token === undefined || token == "") {
+				logout(token,localStorage.getItem(LOCALIDOP));
+			}
+
+			//rellenar página con parámetros
+			$("#titulo").html("INCIDENCIAS URGENTES");
+
+			$("#nuevainc").on("click", {
+				"": ""
+			}, function(evento) {
+				if (navigator.onLine) {
+					var params = {
+						"op": "idIncidencia",
+						"token": token
+					};
+
+					$.ajax({
+						url: APIURL,
+						data: params, //parámetros pasados
+						type: 'POST',
+						dataType: "json",
+						crossDomain: true,
+						success: function(jsonrespuesta) {
+							if (jsonrespuesta.status == "KO") {
+								switch (jsonrespuesta.error) {
+									case "1":
+										$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + jsonrespuesta.message + '.');
+										break;
+										case "99":
+											logout(token,localStorage.getItem(LOCALIDOP));
+											break;
+										default:
+											$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación');;
+								}
+							}
+							if (jsonrespuesta.status == "OK") {
+								localStorage.setItem(LOCALIDINCID, jsonrespuesta.id);
+								$("#foto").show();
+								$("#plano").show();
+								$("#parte").show();
+								$("#cerrarinc").show();
+								$("#sep").show();
+							}
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+							$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Error de acceso. El servidor no responde.');
+						},
+					});
+				}else{ //navigator
+					$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.');
+				}
+			});
+
+			$("#cerrarinc").on("click", {
+				"": ""
+			}, function(evento) {
+				localStorage.removeItem(LOCALIDINCID);
+				$("#foto").hide();
+				$("#plano").hide();
+				$("#parte").hide();
+				$("#cerrarinc").hide();
+				$("#sep").hide();
+
+			});
+			$("#historial").on("click", {
+				"": ""
+			}, function(evento) {
+
+				window.location.href = "fest-historial.html?token=" + token;
+
+			});
+			$("#foto").on("click", {
+				"": ""
+			}, function(evento) {
+
+				window.location.href = "fest-foto.html?token=" + token;
+
+			});
+			$("#plano").on("click", {
+				"": ""
+			}, function(evento) {
+
+				window.location.href = "fest-planos.html?token=" + token;
+
+			});
+			$("#parte").on("click", {
+				"": ""
+			}, function(evento) {
+
+				window.location.href = "fest-eligeparte.html?token=" + token;
+
+			});
+
+			$("#login > .opt").click(function() {
+				setDestinoTop($(this).attr('destino'));
+			});
+
+			$("#navegador > #sections > .sect").click(function() {
+				setDestinoInci($(this).attr('destino'));
+			});
+		});
+	</script>
+</body>
+
+</html>

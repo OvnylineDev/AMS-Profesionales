@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es-ES">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Last-Modified" content="0">
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+
+	<title>Gestión de Intervenciones 1.0</title>
+
+	<script src="./resources/js/jq.js"></script>
+	<script src="./resources/js/gv.js"></script>
+	<script src="./resources/js/sp.js"></script>
+	<script src='./resources/tinymce/tinymce.min.js'></script>
+
+	<link href="./resources/css/w3.css" rel="stylesheet">
+	<link href="./resources/css/style.css" rel="stylesheet">
+	<link href="./resources/fa/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body class="w3-large">
+	<div id="top" class="w3-padding-large w3-large w3-red">
+		<div id="titulo">
+
+		</div>
+		<div id="login">
+			<a class="opt" destino="principal.html"><i class="fa fa-list" aria-hidden="true"></i></a>
+			<a class="opt" destino="fest-general.html"><i class="fa fa-file-text-o " aria-hidden="true"></i></a>
+			<a class="opt" destino="reload"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+			<a class="opt" destino="index.html"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+		</div>
+	</div>
+	<div id="info" class="w3-padding-large w3-border">
+
+	</div>
+	<div id="contenedor_items" class="w3-padding-large">
+
+		<div id="navegador" class="w3-cell-row w3-center" style="width:100%">
+			<div class="topnav" id="sections">
+				<a class="sect" destino="fest-general.html"><i class="fa fa-undo" aria-hidden="true"></i> Volver</a>
+			</div>
+		</div>
+		<div id="selparte" class="w3-light-grey w3-center w3-round w3-padding-16" style="width:100%;margin-bottom:16px;overflow: hidden">
+			<div class="w3-cell-row">
+
+			</div>
+		</div>
+
+	</div>
+	<script>
+		var token = "";
+		var idIncidencia = "";
+
+		$(document).ready(function() {
+
+			token = gv_get_URL_parameter("token");
+			idIncidencia = localStorage.getItem(LOCALIDINCID);
+
+			if (localStorage.length = 0 ||
+				token === null || token === undefined || token == "" ||
+				idIncidencia === null || idIncidencia === undefined || idIncidencia == "") {
+				logout(token, localStorage.getItem(LOCALIDOP));
+			}
+
+			$("#titulo").html("PARTE INCIDENCIAS URGENTES");
+
+			if (navigator.onLine) {
+				var params = {
+					"op": "getTiposParteBase",
+					"token": token
+				};
+
+				$.ajax({
+					url: APIURL,
+					data: params, //parámetros pasados
+					type: 'POST',
+					dataType: "json",
+					crossDomain: true,
+					success: function(jsonrespuesta) {
+						// var jsonrespuesta=jQuery.parseJSON(respuesta);
+
+						if (jsonrespuesta.status == "KO") {
+							$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Error de acceso. El servidor no responde, vuelva a la pantalla <a href="principal.html">principal</a>.');
+						}
+						if (jsonrespuesta.status == "OK") {
+							var j = 0;
+
+							for (var i = 0; i < jsonrespuesta.items.length; i++) {
+								var id = (jsonrespuesta.items[i].id != null) ? jsonrespuesta.items[i].id : "";
+								var nombre = (jsonrespuesta.items[i].nombre != null) ? jsonrespuesta.items[i].nombre : "";
+								var generico = (jsonrespuesta.items[i].generico  == "true");
+								var html = "";
+
+								html = html + '\
+								<div id="' + id + '" class ="w3-block w3-center w3-btn parte" style="display:inline-block;width:30%;padding-top:50px;padding-bottom:50px" > \
+									<div class="w3-cell-row"> \
+										<i class="fa fa-file-text-o w3-xxlarge"" aria-hidden="true"></i>\
+										<div class="w3-padding-16"></div>' + nombre + ' \
+									</div>\
+								</div>';
+
+								$("#selparte > div").append(html);
+							}
+
+						}
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Error de acceso. El servidor no responde.');
+					},
+				});
+			}else{ //navigator
+				$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.');
+			}
+
+			$("#login > .opt").click(function() {
+				setDestinoTop($(this).attr('destino'));
+			});
+
+			$("#navegador > #sections > .sect").click(function() {
+				setDestinoInci($(this).attr('destino'));
+			});
+
+			// $(".close").click(function() {
+			// 	$(this).parent(".campo").parent(".modal").hide();
+			// });
+
+
+		});
+
+
+		$(document).on("click", '.parte', function(event) {
+			window.location.href = "fest-parte.html?token=" + token + "&idParte=" + $(this).attr('id');
+		});
+	</script>
+</body>
+
+</html>
