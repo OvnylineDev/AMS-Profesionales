@@ -60,6 +60,11 @@
 				window.location.href= "mobincube://javascript/getMobToken('{instance}')";
 			}
 
+			if (checkPhonegap()){
+				mobtoken = device.uuid;
+				alert(mobtoken);
+			}
+
 			if (typeof(Storage) !== "undefined") {
 
 				var usuario = localStorage.getItem("gv_usuario");
