@@ -60,15 +60,15 @@
 
 
     <!-- Iconos para cada plataforma -->
-    <icon src="res/icon/icon.png" />
+    <icon src="resources/icons/icon.png" />
 
     <!-- Android -->
     <!-- <icon src="resources/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" /> -->
     <icon src="resources/icons/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="resources/icons/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
     <icon src="resources/icons/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
-    <icon src="resources/icons/android/icon-144-xxhpi.png"  gap:platform="android"    gap:density="xxhdpi" />
-    <icon src="resources/icons/android/icon-192-xxhpi.png"  gap:platform="android"    gap:density="xxhdpi" />
+    <icon src="resources/icons/android/icon-144-xxhdpi.png"  gap:platform="android"    gap:density="xxhdpi" />
+    <icon src="resources/icons/android/icon-192-xxhdpi.png"  gap:platform="android"    gap:density="xxhdpi" />
 
     <!-- IOS -->
     <!-- <icon src="resources/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
