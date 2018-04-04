@@ -6,10 +6,6 @@
 		versionCode = "1840" >
 
 	<!-- v1.1.0: Cambio de versión cli-5.2. Programa Fiestas Verano 2016 -->
-	<!-- v1.1.1: Programa Fiestas Santa Teresa 2016 -->
-	<!-- v1.1.2: Cambio a versión cli-6.3. Programa Teatro 2016 -->
-	<!-- v1.1.3: Programa Navidad 2016 -->
-	<!-- v1.1.4: Externalización de programas de fiestas -->
 
     <name>AMS Profesionales</name>
 
@@ -64,11 +60,11 @@
 
     <!-- Android -->
     <!-- <icon src="resources/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" /> -->
-    <icon src="resources/icons/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
+    <!-- <icon src="resources/icons/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="resources/icons/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
     <icon src="resources/icons/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
     <icon src="resources/icons/android/icon-144-xxhdpi.png"  gap:platform="android"    gap:density="xxhdpi" />
-    <icon src="resources/icons/android/icon-192-xxhdpi.png"  gap:platform="android"    gap:density="xxhdpi" />
+    <icon src="resources/icons/android/icon-192-xxhdpi.png"  gap:platform="android"    gap:density="xxhdpi" /> -->
 
     <!-- IOS -->
     <!-- <icon src="resources/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
