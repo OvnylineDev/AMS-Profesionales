@@ -9,9 +9,11 @@
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="Expires" content="0" />
 	<title>Gestión de Intervenciones 1.0</title>
-	<script src="./resources/js/jq.js"></script>
+	<script type="text/javascript" src="./resources/js/jq.js"></script>
 
-	<script src="./resources/js/gv.js"></script>
+	<script type="text/javascript" src="./resources/js/gv.js"></script>
+	<script type="text/javascript" src="./resources/js/cv.js"></script>
+
 	<link href="./resources/css/w3.css" rel="stylesheet">
 	<link href="./resources/css/style.css" rel="stylesheet">
 	<link href="./resources/fa/css/font-awesome.css" rel="stylesheet">
@@ -45,8 +47,7 @@
 		<div id="info_acceso" class="w3-padding-32 w3-center w3-text-red"></div>
 	</div>
 
-	<script type="text/javascript" src="./resources/js/cv.js"></script>
-	<script type="text/javascript" src="./resources/js/pg.js"></script>
+	<!-- <script type="text/javascript" src="./resources/js/pg.js"></script> -->
 	<script>
 		var mobtoken = "";
 
@@ -54,9 +55,10 @@
 			mobtoken = mobtoken;
 		}
 
-		app.initialize();
-
-		alert(device.uuid);
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+		    console.log(device.cordova);
+		}
 
 		$(document).ready(function() {
 
@@ -74,7 +76,7 @@
 			// }
 			//
 
-			// alert(device.uuid);
+			alert(device.uuid);
 
 			if (typeof(Storage) !== "undefined") {
 
