@@ -55,11 +55,6 @@
 			token = mobtoken;
 		}
 
-		document.addEventListener("deviceready", onDeviceReady, false);
-		function onDeviceReady() {
-		    alert("deviceready");
-		}
-
 		$(document).ready(function() {
 
 			$("#titulo").html(NAMEAPP + " - " + NAMECOMP);
@@ -70,8 +65,12 @@
 			}
 
 			if (checkPhonegap()){
-				// alert("phonegap");
+				alert("phonegap");
 				token = device.uuid;
+				alert(token);
+
+				navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
+
 			}else {
 				// alert("no phonegap");
 			}
