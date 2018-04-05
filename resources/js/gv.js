@@ -312,14 +312,14 @@ function checkPhonegap(){
 }
 
 
-function cameraSuccess{
-	alert("cameraSuccess");
+function cameraSuccess(){
+	console.log("cameraSuccess");
 }
 
-function cameraError{
-	alert("cameraError");
+function cameraError(){
+	console.log("cameraError");
 }
 
-function cameraOptions{
-	alert("cameraOptions");
+function cameraOptions(){
+	console.log("cameraOptions");
 }

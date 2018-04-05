@@ -65,9 +65,9 @@
 			}
 
 			if (checkPhonegap()){
-				alert("phonegap");
+				console.log("phonegap");
 				token = device.uuid;
-				alert(token);
+				console.log(token);
 
 				navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
 
