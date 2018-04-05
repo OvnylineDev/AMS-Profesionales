@@ -290,36 +290,12 @@ function isImage(imgtype){
 	}
 }
 
-function checkMobincube(){
-	if (navigator.appVersion.indexOf("mobincube") != -1) {
-		// alert("true");
-		return true;
-	}else{
-		// alert("false");
-		return false;
-	}
-}
-
-function checkPhonegap(){
-	var app = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
-	if ( app ) {
-		// PhoneGap application
-		return true;
-	} else {
-		// Web page
-		return false;
-	}
-}
-
-
-function cameraSuccess(){
-	console.log("cameraSuccess");
-}
-
-function cameraError(){
-	console.log("cameraError");
-}
-
-function cameraOptions(){
-	console.log("cameraOptions");
-}
+// function checkMobincube(){
+// 	if (navigator.appVersion.indexOf("mobincube") != -1) {
+// 		// alert("true");
+// 		return true;
+// 	}else{
+// 		// alert("false");
+// 		return false;
+// 	}
+// }

@@ -616,7 +616,7 @@
 			var fecha = "";
 			var diasem = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
 			var dianame = diasem[date.getDay()];
-			var dates = ('0' + date.getDate()).slice(-2) + '/' + ('0' + (date.getMonth()+1)).slice(-2) + '/' + date.getFullYear();
+			var dates = ('0' + date.getDate()).slice(-2) + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + date.getFullYear();
 			var hora = ('0' + (date.getHours()+1)).slice(-2);
 			var minutos = ('0' + (date.getMinutes()+1)).slice(-2);
 
