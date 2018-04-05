@@ -45,5 +45,6 @@
                receivedElement.setAttribute('style', 'display:block;');
 
                console.log('Received Event: ' + id);
+               alert('Received Event: ' + id);
           }
      };
