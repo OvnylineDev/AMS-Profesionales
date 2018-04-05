@@ -310,3 +310,16 @@ function checkPhonegap(){
 		return false;
 	}
 }
+
+
+function cameraSuccess{
+	alert("cameraSuccess");
+}
+
+function cameraError{
+	alert("cameraError");
+}
+
+function cameraOptions{
+	alert("cameraOptions");
+}
