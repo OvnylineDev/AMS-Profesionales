@@ -40,8 +40,8 @@
 
     <!-- Plugins -->
 	<plugin name="cordova-plugin-device" spec="~2.0.1" />
-	<plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
 	<plugin name="cordova-plugin-camera" spec="~4.0.2" />
+	<plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
 	<!-- <gap:plugin name="cordova-plugin-geolocation" source="npm" version="2.2.0" /> -->
 	<!-- <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.4.0" /> -->
 	<!-- <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" version="5.1.1" /> -->
@@ -91,7 +91,16 @@
     	<allow-intent href="*" />
 	<allow-intent href="tel:*" />
 	<allow-intent href="sms:*" />
-	<allow-navigation href="*" />
 	<access origin="*"/>
+
+	<!-- A wildcard can be used to whitelist the entire network,
+     over HTTP and HTTPS.
+     *NOT RECOMMENDED* -->
+	<allow-navigation href="*" />
+
+	<!-- The above is equivalent to these three declarations -->
+	<allow-navigation href="http://*/*" />
+	<allow-navigation href="https://*/*" />
+	<allow-navigation href="data:*" />
 
 </widget>
