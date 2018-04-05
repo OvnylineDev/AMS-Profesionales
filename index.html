@@ -49,10 +49,10 @@
 
 	<!-- <script type="text/javascript" src="./resources/js/pg.js"></script> -->
 	<script>
-		var mobtoken = "";
+		var token = "";
 
 		function getMobToken(mobtoken){
-			mobtoken = mobtoken;
+			token = mobtoken;
 		}
 
 		document.addEventListener("deviceready", onDeviceReady, false);
@@ -69,12 +69,12 @@
 				window.location.href= "mobincube://javascript/getMobToken('{instance}')";
 			}
 
-			// if (checkPhonegap()){
-			// 	mobtoken = device.uuid;
-			// }else {
-			// 	alert("no phonegap");
-			// }
-			//
+			if (checkPhonegap()){
+				alert("phonegap");
+				// mobtoken = device.uuid;
+			}else {
+				alert("no phonegap");
+			}
 
 			alert(device.uuid);
 
@@ -111,7 +111,7 @@
 					"op": "login",
 					"usuario": usuario,
 					"clave": clave,
-					"mobtoken": mobtoken
+					"mobtoken": token
 				};
 
 				// alert(mobincube);
