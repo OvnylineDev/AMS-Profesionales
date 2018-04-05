@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="./resources/js/jq.js"></script>
 
 	<script type="text/javascript" src="./resources/js/gv.js"></script>
-	<script type="text/javascript" src="./resources/js/cv.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
 
 	<link href="./resources/css/w3.css" rel="stylesheet">
 	<link href="./resources/css/style.css" rel="stylesheet">
@@ -69,7 +69,7 @@
 				token = device.uuid;
 				console.log(token);
 
-				navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
+				// navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
 
 			}else {
 				// alert("no phonegap");
