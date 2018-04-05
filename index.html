@@ -33,18 +33,6 @@
 			text-transform: none !important;
 		}
 	</style>
-
-	<script type="text/javascript">
-          // Wait for device API libraries to load
-          //
-          document.addEventListener("deviceready", onDeviceReady, false);
-
-          // device APIs are available
-          //
-          function onDeviceReady() {
-			alert(device.uuid);
-          }
-    </script>
 </head>
 
 <body class="w3-large">
@@ -68,29 +56,20 @@
 	<script>
 		var token = "";
 
-		function getMobToken(mobtoken){
-			token = mobtoken;
-		}
+		// Wait for device API libraries to load
+          //
+          document.addEventListener("deviceready", onDeviceReady, false);
+
+          // device APIs are available
+          //
+          function onDeviceReady() {
+			token = device.uuid;
+			alert("deviceready");
+          }
 
 		$(document).ready(function() {
 
 			$("#titulo").html(NAMEAPP + " - " + NAMECOMP);
-
-			//recoger la variable instancede mobincube
-			if (checkMobincube()){
-				window.location.href= "mobincube://javascript/getMobToken('{instance}')";
-			}
-
-			// if (checkPhonegap()){
-			// 	console.log("phonegap");
-			// 	token = device.uuid;
-			// 	console.log(token);
-			//
-			// 	// navigator.camera.getPicture(cameraSuccess, cameraError, cameraOptions);
-			//
-			// }else {
-			// 	// alert("no phonegap");
-			// }
 
 			if (typeof(Storage) !== "undefined") {
 
