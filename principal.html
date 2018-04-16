@@ -11,7 +11,11 @@
 	<title>Gestión de Intervenciones 1.0</title>
 	<script src="./resources/js/jq.js"></script>
 
-	<script type="text/javascript" src="./resources/js/gv.js"><script type="text/javascript" src="./resources/js/pg.js"></script>
+	<script type="text/javascript" src="./resources/js/gv.js"></script>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="./resources/js/pg.js"></script>
+
 	<link href="./resources/css/w3.css" rel="stylesheet">
 	<link href="./resources/css/style.css" rel="stylesheet">
 	<link href="./resources/fa/css/font-awesome.css" rel="stylesheet">
@@ -49,16 +53,6 @@
 	</div>
 	<script>
 		var token = "";
-
-		// Wait for device API libraries to load
-          document.addEventListener("deviceready", phonegapReady, false);
-
-          // device APIs are available
-          function phonegapReady() {
-			document.addEventListener("backbutton", function(){
-				logout(token,localStorage.getItem(LOCALIDOP));
-			}, false);
-          }
 
 		$(document).ready(function() {
 			$("#titulo").html(NAMEAPP + " - " + NAMECOMP);

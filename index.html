@@ -16,8 +16,10 @@
 	<title>Gestión de Intervenciones 1.0</title>
 	<script type="text/javascript" src="./resources/js/jq.js"></script>
 
-	<script type="text/javascript" src="./resources/js/gv.js"></script><script type="text/javascript" src="./resources/js/pg.js"></script>
+	<script type="text/javascript" src="./resources/js/gv.js"></script>
+
 	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="./resources/js/pg.js"></script>
 
 	<link href="./resources/css/w3.css" rel="stylesheet">
 	<link href="./resources/css/style.css" rel="stylesheet">
@@ -62,9 +64,9 @@
           // device APIs are available
           function phonegapReady() {
 			mobtoken = device.uuid;
-			document.addEventListener("backbutton", function(){
-				navigator.app.exitApp();
-			}, false);
+			// document.addEventListener("backbutton", function(){
+			// 	navigator.app.exitApp();
+			// }, false);
           }
 
 		$(document).ready(function() {
