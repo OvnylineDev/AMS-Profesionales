@@ -1,11 +1,11 @@
-var location = "";
+// var location = "";
 //events
 // Wait for device API libraries to load
 
 document.addEventListener("deviceready", phonegapReady, false);
 
 function phonegapReady(){
-     var location = getURL();
+     // location = getURL();
      document.addEventListener("backbutton", onBackKeyDown, false);
 }
 
@@ -15,7 +15,7 @@ function onBackKeyDown() {
      // alert(window.location.pathname);
      // var url = window.location.pathname;
      // var filename = url.substring(url.lastIndexOf('/')+1);
-     alert(location);
+     alert("location");
      //
      // switch (location) {
      //      case "index.html":
