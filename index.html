@@ -59,10 +59,10 @@
 		var mobtoken = "";
 
 		// Wait for device API libraries to load
-          document.addEventListener("deviceready", phonegapReady, false);
+          document.addEventListener("deviceready", indexpReady, false);
 
           // device APIs are available
-          function phonegapReady() {
+          function indexpReady() {
 			mobtoken = device.uuid;
           }
 

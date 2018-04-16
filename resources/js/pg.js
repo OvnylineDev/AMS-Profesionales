@@ -5,7 +5,7 @@ var location = "";
 document.addEventListener("deviceready", phonegapReady, false);
 
 function phonegapReady(){
-     location = getURLLocation();
+     location = getURL();
      document.addEventListener("backbutton", onBackKeyDown, false);
 }
 
@@ -82,4 +82,10 @@ function onBackKeyDown() {
      //      default:
      //
      // }
+}
+
+function getURL() {
+     var url = window.location.pathname;
+     var filename = url.substring(url.lastIndexOf('/')+1);
+     return filename;
 }
