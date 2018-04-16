@@ -9,4 +9,10 @@ function phonegapReady(){
 
 function onBackKeyDown() {
      alert(document.URL);
+     alert(location.pathname);
+     alert(window.location.pathname);
+
+
+     var filename = url.substring(url.lastIndexOf('/')+1);
+     alert(filename);
 }
