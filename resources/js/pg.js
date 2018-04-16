@@ -8,9 +8,9 @@ function phonegapReady(){
 }
 
 function onBackKeyDown() {
-     alert(document.URL);
-     alert(location.pathname);
-     alert(window.location.pathname);
+     // alert(document.URL);
+     // alert(location.pathname);
+     // alert(window.location.pathname);
 
 
 
