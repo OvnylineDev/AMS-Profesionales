@@ -54,6 +54,18 @@
 	<script>
 		var token = "";
 		var tipo = "";
+		var back = "principal.html"
+
+		// Wait for device API libraries to load
+          document.addEventListener("deviceready", phonegapReady, false);
+
+          // device APIs are available
+          function phonegapReady() {
+			document.addEventListener("backbutton", function(){
+				alert(token);
+				window.location.href = back + "?token=" + token;
+			}, false);
+          }
 
 		$(document).ready(function() {
 

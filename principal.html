@@ -50,6 +50,16 @@
 	<script>
 		var token = "";
 
+		// Wait for device API libraries to load
+          document.addEventListener("deviceready", phonegapReady, false);
+
+          // device APIs are available
+          function phonegapReady() {
+			document.addEventListener("backbutton", function(){
+				logout(token,localStorage.getItem(LOCALIDOP));
+			}, false);
+          }
+
 		$(document).ready(function() {
 			$("#titulo").html(NAMEAPP + " - " + NAMECOMP);
 

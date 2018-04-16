@@ -57,14 +57,14 @@
 		var mobtoken = "";
 
 		// Wait for device API libraries to load
-          //
-          document.addEventListener("deviceready", onDeviceReady, false);
+          document.addEventListener("deviceready", phonegapReady, false);
 
           // device APIs are available
-          //
-          function onDeviceReady() {
+          function phonegapReady() {
 			mobtoken = device.uuid;
-			// alert(mobtoken);
+			document.addEventListener("backbutton", function(){
+				navigator.app.exitApp();
+			}, false);
           }
 
 		$(document).ready(function() {

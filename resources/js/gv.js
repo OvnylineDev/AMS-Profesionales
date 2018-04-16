@@ -302,6 +302,12 @@ function isImage(imgtype){
 	}
 }
 
+function getURLLocation() {
+     var url = window.location.pathname;
+     var filename = url.substring(url.lastIndexOf('/')+1);
+     return filename;
+}
+
 // function checkMobincube(){
 // 	if (navigator.appVersion.indexOf("mobincube") != -1) {
 // 		// alert("true");
