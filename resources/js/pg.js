@@ -8,5 +8,5 @@ function phonegapReady(){
 }
 
 function onBackKeyDown() {
-     alert("ha pulsado back");
+     alert(document.URL);
 }
