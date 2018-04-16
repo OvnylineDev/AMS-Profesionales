@@ -160,6 +160,18 @@ function setDestinoNav(destino){
 	window.location.href = destinoCompleto;
 }
 
+function setDestinoMP(destino){
+	var destinoCompleto = destino + "?token=" + token +
+		"&idSerie=" + idSerie +
+		"&numeroOrden=" + numeroOrden;
+
+	if (destino == "parte.html") {
+		destinoCompleto = destinoCompleto + "&parteExtra=" + false;
+	}
+
+	window.location.href = destinoCompleto;
+}
+
 function setDestinoInci(destino){
 	var destinoCompleto = destino + "?token=" + token;
 

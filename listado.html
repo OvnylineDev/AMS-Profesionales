@@ -11,7 +11,7 @@
 	<title>Gestión de Intervenciones 1.0</title>
 	<script src="./resources/js/jq.js"></script>
 
-	<script src="./resources/js/gv.js"></script>
+	<script type="text/javascript" src="./resources/js/gv.js"><script type="text/javascript" src="./resources/js/pg.js"></script>
 	<link href="./resources/css/w3.css" rel="stylesheet">
 	<link href="./resources/css/style.css" rel="stylesheet">
 	<link href="./resources/fa/css/font-awesome.css" rel="stylesheet">
@@ -171,7 +171,7 @@
 			if (tipo === TIPOEXPPEND) {
 				localStorage.setItem(LOCALIDEXPEST, $(this).attr('idexp'));
 
-				window.location.href = "llamada.html?token=" + token +
+				window.location.href = "menup.html?token=" + token +
 					"&idSerie=" + $(this).attr('idSerie') +
 					"&numeroOrden=" + $(this).attr('numeroOrden');
 			}
