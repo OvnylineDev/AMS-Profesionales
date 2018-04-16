@@ -115,9 +115,9 @@
 			idSerie = gv_get_URL_parameter("idSerie");
 			numeroOrden = gv_get_URL_parameter("numeroOrden");
 
-			// if (localStorage.length = 0 || token === undefined || idSerie === undefined || numeroOrden === undefined || token == "" || idSerie == "" || numeroOrden == "") {
-			// 	logout(token,localStorage.getItem(LOCALIDOP));
-			// }
+			if (localStorage.length = 0 || token === undefined || idSerie === undefined || numeroOrden === undefined || token == "" || idSerie == "" || numeroOrden == "") {
+				logout(token,localStorage.getItem(LOCALIDOP));
+			}
 
 			var flag = localStorage.getItem(LOCALSUBC) === '1';
 
@@ -131,17 +131,6 @@
 
 			//rellenar página con parámetros
 			$("#titulo").html("MENÚ PRINCIPAL");
-
-			/*
-		llamada
-		historial
-		seguimiento
-		foto
-		planos
-		parte
-		val
-		fincita
-			 */
 
 			$("#llamada").on("click", {
 				"": ""
