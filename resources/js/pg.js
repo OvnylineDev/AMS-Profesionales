@@ -30,28 +30,44 @@ function onBackKeyDown() {
                window.location.href = "principal.html" + "?token=" + token;
           break;
           case "llamada.html":
-               window.location.href = "menup.html" + "?token=" + token;
+               window.location.href = "menup.html" + "?token=" + token +
+          		"&idSerie=" + idSerie +
+          		"&numeroOrden=" + numeroOrden;
           break;
           case "historial.html":
-               window.location.href = "menup.html" + "?token=" + token;
+               window.location.href = "menup.html" + "?token=" + token +
+          		"&idSerie=" + idSerie +
+          		"&numeroOrden=" + numeroOrden;
           break;
           case "seguimiento.html":
-               window.location.href = "menup.html" + "?token=" + token;
+               window.location.href = "menup.html" + "?token=" + token +
+          		"&idSerie=" + idSerie +
+          		"&numeroOrden=" + numeroOrden;
           break;
           case "foto.html":
-               window.location.href = "menup.html" + "?token=" + token;
+               window.location.href = "menup.html" + "?token=" + token +
+          		"&idSerie=" + idSerie +
+          		"&numeroOrden=" + numeroOrden;
           break;
           case "planos.html":
-               window.location.href = "menup.html" + "?token=" + token;
+               window.location.href = "menup.html" + "?token=" + token +
+          		"&idSerie=" + idSerie +
+          		"&numeroOrden=" + numeroOrden;
           break;
           case "parte.html":
-               window.location.href = "menup.html" + "?token=" + token;
+               window.location.href = "menup.html" + "?token=" + token +
+          		"&idSerie=" + idSerie +
+          		"&numeroOrden=" + numeroOrden;
           break;
           case "fincita.html":
-               window.location.href = "menup.html" + "?token=" + token;
+               window.location.href = "menup.html" + "?token=" + token +
+          		"&idSerie=" + idSerie +
+          		"&numeroOrden=" + numeroOrden;
           break;
           case "val-general.html":
-               window.location.href = "menup.html" + "?token=" + token;
+               window.location.href = "menup.html" + "?token=" + token +
+          		"&idSerie=" + idSerie +
+          		"&numeroOrden=" + numeroOrden;
           break;
           case "val-foto.html":
                alert(url);
