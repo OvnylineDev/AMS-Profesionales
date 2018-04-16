@@ -54,7 +54,7 @@
 
 	<!-- <script type="text/javascript" src="./resources/js/pg.js"></script> -->
 	<script>
-		var token = "";
+		var mobtoken = "";
 
 		// Wait for device API libraries to load
           //
@@ -63,7 +63,8 @@
           // device APIs are available
           //
           function onDeviceReady() {
-			token = device.uuid;
+			mobtoken = device.uuid;
+			alert(mobtoken);
           }
 
 		$(document).ready(function() {
@@ -103,7 +104,7 @@
 					"op": "login",
 					"usuario": usuario,
 					"clave": clave,
-					"mobtoken": token
+					"mobtoken": mobtoken
 				};
 
 				// alert(mobincube);
@@ -130,7 +131,7 @@
 									$("#info_acceso").html("Usuario o clave no válidos.");
 									break;
 								case "99":
-									logout(token,localStorage.getItem(LOCALIDOP));
+									logout(mobtoken,localStorage.getItem(LOCALIDOP));
 									break;
 								default:
 									$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación');;
