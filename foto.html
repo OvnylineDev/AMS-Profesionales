@@ -376,7 +376,7 @@
 		}
 
 		function openCamera(){
-			alert(navigator.camera);
+			// alert(navigator.camera);
 		     navigator.camera.getPicture( onSuccess, onFail, {
 		          quality: 50,
 		          destinationType : Camera.DestinationType.NATIVE_URI,
@@ -388,52 +388,51 @@
 		}
 
 		function onSuccess(imageURI) {
-			alert("onSuccess");
-			// var myDate = new Date();
-			//
-			// pos++;
-			//
-			// var cont = document.createElement("DIV");
-			// cont.id = pos;
-			// cont.className = "imgs";
-			//
-			// var i = document.createElement("I");
-			// i.className = "fa fa-times close";
-			// // // i.aria-hidden = "true";
-			//
-			// var text = document.createElement("TEXTAREA");
-			// text.className = "textfield";
-			//
-			// var dateTxt = document.createElement("SPAN");
-			// dateTxt.className = "datetxt";
-			// dateTxt.append(convertdatesql(myDate));
-			//
-			// var img = new Image();
-			// img.src = imageURI;
-			//
-			// var canvas = document.createElement("canvas");
-			//
-			// img.onload = function () {
-			// 	var value = 40;
-			//
-			// 	// RESIZE THE IMAGES ONE BY ONE.
-			// 	img.width = (img.width * value) / 100
-			// 	img.height = (img.height * value) / 100
-			//
-			// 	var ctx = canvas.getContext("2d");
-			// 	ctx.clearRect(0, 0, canvas.width, canvas.height);
-			// 	canvas.width = img.width;
-			// 	canvas.height = img.height;
-			// 	ctx.drawImage(img, 0, 0, img.width, img.height);
-			// }
-			//
-			// cont.appendChild(i);
-			// cont.appendChild(canvas);
-			// cont.appendChild(text);
-			// cont.appendChild(dateTxt);
-			//
-			// $('#imagesel').append(cont);
-			// // $('#imagesel').append("<div id='" + pos + "' class='imgs'><i class='fa fa-times close' aria-hidden='true'></i><img src='" + dataimg + "'/><textarea class='textfield' cols='30' rows='8'></textarea></div>");
+			var myDate = new Date();
+
+			pos++;
+
+			var cont = document.createElement("DIV");
+			cont.id = pos;
+			cont.className = "imgs";
+
+			var i = document.createElement("I");
+			i.className = "fa fa-times close";
+			// // i.aria-hidden = "true";
+
+			var text = document.createElement("TEXTAREA");
+			text.className = "textfield";
+
+			var dateTxt = document.createElement("SPAN");
+			dateTxt.className = "datetxt";
+			dateTxt.append(convertdatesql(myDate));
+
+			var img = new Image();
+			img.src = imageURI;
+
+			var canvas = document.createElement("canvas");
+
+			img.onload = function () {
+				var value = 40;
+
+				// RESIZE THE IMAGES ONE BY ONE.
+				img.width = (img.width * value) / 100
+				img.height = (img.height * value) / 100
+
+				var ctx = canvas.getContext("2d");
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				canvas.width = img.width;
+				canvas.height = img.height;
+				ctx.drawImage(img, 0, 0, img.width, img.height);
+			}
+
+			cont.appendChild(i);
+			cont.appendChild(canvas);
+			cont.appendChild(text);
+			cont.appendChild(dateTxt);
+
+			$('#imagesel').append(cont);
+			// $('#imagesel').append("<div id='" + pos + "' class='imgs'><i class='fa fa-times close' aria-hidden='true'></i><img src='" + dataimg + "'/><textarea class='textfield' cols='30' rows='8'></textarea></div>");
 		}
 
 		function onFail(message) {
