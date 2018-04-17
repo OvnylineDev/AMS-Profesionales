@@ -90,7 +90,7 @@
 				<h4>Enviar Fotografías</h4>
 				<i id="cam" class="fa fa-camera"></i>
 				<i id="selbut" class="fa fa-image"></i><br /><span id="numimg">No hay imágenes seleccionadas</span>
-				<input id="fileupload" name="img" type="file" capture="camera" accept="image/*"/>
+				<input id="fileupload" name="img" type="file" accept="img/jpeg" multiple/>
 				<span id="imagesel">
 
 				</span>
@@ -201,6 +201,7 @@
 						// console.log(filenames[i] + ": " + filext[i] + " - " + filedata[i]);
 						// console.log("Desc: " + filedescs[i]);
 					}
+
 					if (navigator.onLine) {
 						var params = {
 							"op": "subirarch",
@@ -264,17 +265,6 @@
 			$("#selbut").click(function() {
 				$("#fileupload").trigger('click');
 			});
-
-			// $("#cam").click(function() {
-			// 	navigator.camera.getPicture( onSuccess, onFail, {
-			//           quality: 50,
-			//           destinationType : Camera.DestinationType.NATIVE_URI,
-			//           sourceType : Camera.PictureSourceType.CAMERA,
-			//           encodingType: Camera.EncodingType.JPEG,
-			//           mediaType: Camera.MediaType.PICTURE,
-			//           saveToPhotoAlbum: true
-			//      });
-			// });
 
 			$('#fileupload').on('change', function(e) {
 				var files = e.target.files;
@@ -389,6 +379,7 @@
 
 		function onSuccess(imageURI) {
 			var myDate = new Date();
+			var imgs = $('#imagesel canvas');
 
 			pos++;
 
@@ -432,13 +423,13 @@
 			cont.appendChild(dateTxt);
 
 			$('#imagesel').append(cont);
+			$('#numimg').html((1 + imgs.length) + " Imágenes Seleccionadas");
 			// $('#imagesel').append("<div id='" + pos + "' class='imgs'><i class='fa fa-times close' aria-hidden='true'></i><img src='" + dataimg + "'/><textarea class='textfield' cols='30' rows='8'></textarea></div>");
 		}
 
 		function onFail(message) {
 		     alert('Failed because: ' + message);
 		}
-
 
 	</script>
 </body>
