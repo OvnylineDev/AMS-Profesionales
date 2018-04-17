@@ -70,31 +70,35 @@ function onBackKeyDown() {
           		"&numeroOrden=" + numeroOrden;
           break;
           case "val-foto.html":
-               alert(url);
+               window.location.href = "val-general.html" + "?token=" + token +
+                    "&idSerie=" + idSerie +
+                    "&numeroOrden=" + numeroOrden;
           break;
           case "val-texto.html":
-               alert(url);
-          break;
-          case "fest-eligeparte.html":
-               alert(url);
-          break;
-          case "fest-foto.html":
-               alert(url);
+               window.location.href = "val-general.html" + "?token=" + token +
+                    "&idSerie=" + idSerie +
+                    "&numeroOrden=" + numeroOrden;
           break;
           case "fest-general.html":
-               alert(url);
+               window.location.href = "principal.html" + "?token=" + token;
           break;
-          case "fest-historial.html":
-               alert(url);
-          break;
-          case "fest-parte.html":
-               alert(url);
+          case "fest-foto.html":
+               window.location.href = "fest-general.html" + "?token=" + token;
           break;
           case "fest-planos.html":
-               alert(url);
+               window.location.href = "fest-general.html" + "?token=" + token;
+          break;
+          case "fest-historial.html":
+               window.location.href = "fest-general.html" + "?token=" + token;
+          break;
+          case "fest-eligeparte.html":
+               window.location.href = "fest-general.html" + "?token=" + token;
+          break;
+          case "fest-parte.html":
+               window.location.href = "fest-general.html" + "?token=" + token;
           break;
           default:
-
+               window.location.href = "index.html";
      }
 }
 
@@ -102,4 +106,15 @@ function getURL() {
      var url = window.location.pathname;
      var filename = url.substring(url.lastIndexOf('/')+1);
      return filename;
+}
+
+function openCamera(){
+     navigator.camera.getPicture( onSuccess, onFail, {
+          quality: 50,
+          destinationType : Camera.DestinationType.NATIVE_URI,
+          sourceType : Camera.PictureSourceType.CAMERA,
+          encodingType: Camera.EncodingType.JPEG,
+          mediaType: Camera.MediaType.PICTURE,
+          saveToPhotoAlbum: true
+     });
 }
