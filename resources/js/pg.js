@@ -108,13 +108,13 @@ function getURL() {
      return filename;
 }
 
-function openCamera(){
-     navigator.camera.getPicture( onSuccess, onFail, {
-          quality: 50,
-          destinationType : Camera.DestinationType.NATIVE_URI,
-          sourceType : Camera.PictureSourceType.CAMERA,
-          encodingType: Camera.EncodingType.JPEG,
-          mediaType: Camera.MediaType.PICTURE,
-          saveToPhotoAlbum: true
-     });
-}
+// function openCamera(){
+//      navigator.camera.getPicture( onSuccess, onFail, {
+//           quality: 50,
+//           destinationType : Camera.DestinationType.NATIVE_URI,
+//           sourceType : Camera.PictureSourceType.CAMERA,
+//           encodingType: Camera.EncodingType.JPEG,
+//           mediaType: Camera.MediaType.PICTURE,
+//           saveToPhotoAlbum: true
+//      });
+// }
