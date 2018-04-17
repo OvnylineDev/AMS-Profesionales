@@ -10,11 +10,10 @@ function phonegapReady(){
 
      url = getURL();
      document.addEventListener("backbutton", onBackKeyDown, false);
-     alert(url);
+     // alert(url);
      if (cam.indexOf(url) != -1) {
           var cambutton = document.getElementById("cam");
           cambutton.addEventListener("click", openCamera, false);
-          alert("indexOf");
      }
 }
 
@@ -118,13 +117,12 @@ function getURL() {
 }
 
 function openCamera(){
-     // navigator.camera.getPicture( onSuccess, onFail, {
-     //      quality: 50,
-     //      destinationType : Camera.DestinationType.NATIVE_URI,
-     //      sourceType : Camera.PictureSourceType.CAMERA,
-     //      encodingType: Camera.EncodingType.JPEG,
-     //      mediaType: Camera.MediaType.PICTURE,
-     //      saveToPhotoAlbum: true
-     // });
-     alert("openCamera");
+     navigator.camera.getPicture( onSuccess, onFail, {
+          quality: 50,
+          destinationType : Camera.DestinationType.NATIVE_URI,
+          sourceType : Camera.PictureSourceType.CAMERA,
+          encodingType: Camera.EncodingType.JPEG,
+          mediaType: Camera.MediaType.PICTURE,
+          saveToPhotoAlbum: true
+     });
 }
