@@ -1,17 +1,19 @@
 var url = "";
-var camera = ["foto.html", "fest-foto.html", "fest-foto.html"];
+var cam = ["foto.html", "fest-foto.html", "fest-foto.html"];
+
 //events
 // Wait for device API libraries to load
 
 document.addEventListener("deviceready", phonegapReady, false);
 
 function phonegapReady(){
+
      url = getURL();
      document.addEventListener("backbutton", onBackKeyDown, false);
      alert(url);
-     if (camera.indexOf(url) != -1) {
+     if (cam.indexOf(url) != -1) {
           var cambutton = document.getElementById("cam");
-          cambutton.addEventListener("click", openCamera, false});
+          cambutton.addEventListener("click", openCamera, false);
           alert("indexOf");
      }
 }
