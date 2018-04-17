@@ -1,4 +1,5 @@
 var url = "";
+var camera = ["foto.html", "fest-foto.html", "fest-foto.html"];
 //events
 // Wait for device API libraries to load
 
@@ -7,6 +8,11 @@ document.addEventListener("deviceready", phonegapReady, false);
 function phonegapReady(){
      url = getURL();
      document.addEventListener("backbutton", onBackKeyDown, false);
+
+     if (camera.indexOf(url) != -1) {
+          var cambutton = document.getElementById("cam");
+          cambutton.addEventListener("click", openCamera, false});
+     }
 }
 
 function onBackKeyDown() {
@@ -108,13 +114,13 @@ function getURL() {
      return filename;
 }
 
-// function openCamera(){
-//      navigator.camera.getPicture( onSuccess, onFail, {
-//           quality: 50,
-//           destinationType : Camera.DestinationType.NATIVE_URI,
-//           sourceType : Camera.PictureSourceType.CAMERA,
-//           encodingType: Camera.EncodingType.JPEG,
-//           mediaType: Camera.MediaType.PICTURE,
-//           saveToPhotoAlbum: true
-//      });
-// }
+function openCamera(){
+     navigator.camera.getPicture( onSuccess, onFail, {
+          quality: 50,
+          destinationType : Camera.DestinationType.NATIVE_URI,
+          sourceType : Camera.PictureSourceType.CAMERA,
+          encodingType: Camera.EncodingType.JPEG,
+          mediaType: Camera.MediaType.PICTURE,
+          saveToPhotoAlbum: true
+     });
+}
