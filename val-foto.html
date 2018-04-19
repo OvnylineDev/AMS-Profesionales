@@ -11,7 +11,11 @@
 	<title>Gestión de Intervenciones 1.0</title>
 	<script src="./resources/js/jq.js"></script>
 
-	<script src="./resources/js/gv.js"></script>
+	<script type="text/javascript" src="./resources/js/gv.js"></script>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="./resources/js/pg.js"></script>
+
 	<script src="./resources/js/sp.js"></script>
 	<link href="./resources/css/w3.css" rel="stylesheet">
 	<link href="./resources/css/style.css" rel="stylesheet">
@@ -84,9 +88,9 @@
 		<div class="w3-light-grey w3-round w3-padding" style="width:100%;margin-bottom:16px;overflow: hidden">
 			<div class="w3-cell-row w3-padding-16">
 				<h4>Enviar Fotografías de la Valoración/Presupuesto</h4>
-				<!-- <i id="cam" class="fa fa-camera"></i> -->
+				<i id="cam" class="fa fa-camera"></i>
 				<i id="selbut" class="fa fa-image"></i><br /><span id="numimg">No hay imágenes seleccionadas</span>
-				<input id="fileupload" name="img" type="file" accept="img/jpeg" multiple/>
+				<input id="fileupload" name="img" type="file" accept="image/jpeg" multiple/>
 				<span id="imagesel">
 
 				</span>
@@ -268,12 +272,6 @@
 				$("#fileupload").trigger('click');
 			});
 
-			// $("#cam").click(function() {
-			// 	alert("cam");
-			// 	$("#filecam").trigger('click');
-			// 	$("#fileupload").trigger('click');
-			// });
-
 			$('#fileupload').on('change', function(e) {
 				var files = e.target.files;
 				var imgs = $('#imagesel canvas');
@@ -362,6 +360,82 @@
 				$("#modalfield").hide();
 			}
 		});
+
+
+		/*phonegap*/
+		document.addEventListener("deviceready", readyForCam, false);
+
+		function readyForCam(){
+			// alert("readyForCam");
+			var cambutton = document.getElementById("cam");
+		     cambutton.addEventListener("click", openCamera, false);
+		}
+
+		function openCamera(){
+			// alert(navigator.camera);
+		     navigator.camera.getPicture( onSuccess, onFail, {
+		          quality: 50,
+		          destinationType : Camera.DestinationType.NATIVE_URI,
+		          sourceType : Camera.PictureSourceType.CAMERA,
+		          encodingType: Camera.EncodingType.JPEG,
+		          mediaType: Camera.MediaType.PICTURE,
+		          saveToPhotoAlbum: true
+		     });
+		}
+
+		function onSuccess(imageURI) {
+			var myDate = new Date();
+			var imgs = $('#imagesel canvas');
+
+			pos++;
+
+			var cont = document.createElement("DIV");
+			cont.id = pos;
+			cont.className = "imgs";
+
+			var i = document.createElement("I");
+			i.className = "fa fa-times close";
+			// // i.aria-hidden = "true";
+
+			var text = document.createElement("TEXTAREA");
+			text.className = "textfield";
+
+			var dateTxt = document.createElement("SPAN");
+			dateTxt.className = "datetxt";
+			dateTxt.append(convertdatesql(myDate));
+
+			var img = new Image();
+			img.src = imageURI;
+
+			var canvas = document.createElement("canvas");
+
+			img.onload = function () {
+				var value = 40;
+
+				// RESIZE THE IMAGES ONE BY ONE.
+				img.width = (img.width * value) / 100
+				img.height = (img.height * value) / 100
+
+				var ctx = canvas.getContext("2d");
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				canvas.width = img.width;
+				canvas.height = img.height;
+				ctx.drawImage(img, 0, 0, img.width, img.height);
+			}
+
+			cont.appendChild(i);
+			cont.appendChild(canvas);
+			cont.appendChild(text);
+			cont.appendChild(dateTxt);
+
+			$('#imagesel').append(cont);
+			$('#numimg').html((1 + imgs.length) + " Imágenes Seleccionadas");
+			// $('#imagesel').append("<div id='" + pos + "' class='imgs'><i class='fa fa-times close' aria-hidden='true'></i><img src='" + dataimg + "'/><textarea class='textfield' cols='30' rows='8'></textarea></div>");
+		}
+
+		function onFail(message) {
+		     // alert('Failed because: ' + message);
+		}
 
 	</script>
 </body>
