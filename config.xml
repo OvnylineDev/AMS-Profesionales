@@ -6,6 +6,7 @@
 	versionCode = "4" >
 
 	<!-- v1.2: Cambio a de Mobincube a Phonegap (cli-6.5.0) -->
+	<!-- v1.3: Configuraciones y mejora de rendimiento -->
 
 	<name>AMS Profesionales</name>
 	<!-- <name>AMS Profesionales - Beta</name> -->
