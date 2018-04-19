@@ -17,7 +17,9 @@
 	<script type="text/javascript" src="./resources/js/jq.js"></script>
 
 	<script type="text/javascript" src="./resources/js/gv.js"></script>
+
 	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="./resources/js/pg.js"></script>
 
 	<link href="./resources/css/w3.css" rel="stylesheet">
 	<link href="./resources/css/style.css" rel="stylesheet">
@@ -54,16 +56,14 @@
 
 	<!-- <script type="text/javascript" src="./resources/js/pg.js"></script> -->
 	<script>
-		var token = "";
+		var mobtoken = "";
 
 		// Wait for device API libraries to load
-          //
-          document.addEventListener("deviceready", onDeviceReady, false);
+          document.addEventListener("deviceready", indexReady, false);
 
           // device APIs are available
-          //
-          function onDeviceReady() {
-			token = device.uuid;
+          function indexReady() {
+			mobtoken = device.uuid;
           }
 
 		$(document).ready(function() {
@@ -103,7 +103,7 @@
 					"op": "login",
 					"usuario": usuario,
 					"clave": clave,
-					"mobtoken": token
+					"mobtoken": mobtoken
 				};
 
 				// alert(mobincube);
@@ -130,7 +130,7 @@
 									$("#info_acceso").html("Usuario o clave no válidos.");
 									break;
 								case "99":
-									logout(token,localStorage.getItem(LOCALIDOP));
+									logout(mobtoken,localStorage.getItem(LOCALIDOP));
 									break;
 								default:
 									$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación');;
