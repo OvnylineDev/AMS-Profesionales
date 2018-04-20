@@ -42,7 +42,7 @@
 
 	<!-- Plugins -->
 	<plugin name="cordova-plugin-battery-status"      source="npm" spec="~1.2.4" />
-	<plugin name="cordova-plugin-camera"              source="npm" spec="~2.4.1" />
+	<plugin name="cordova-plugin-camera"              source="npm" spec="~2.4.1" >
 		<variable name="CAMERA_USAGE_DESCRIPTION" value="need camera access to take pictures / necesita acceso a la cámara para tomar fotos" />
 		<variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="need photo library access to get pictures from there / necesita acceso a la galería para tomar fotos" />
 	</plugin>
