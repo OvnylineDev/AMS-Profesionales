@@ -2,8 +2,8 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap   = "http://phonegap.com/ns/1.0"
 	id          = "com.ovnylinedev.amsprofesionales"
-	version     = "1.5"
-	versionCode = "6" >
+	version     = "1.6"
+	versionCode = "7" >
 
 	<!-- v1.2: Cambio a de Mobincube a Phonegap (cli-6.5.0) -->
 	<!-- v1.3: Configuraciones y mejora de rendimiento -->
