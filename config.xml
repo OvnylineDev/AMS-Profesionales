@@ -2,8 +2,8 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap   = "http://phonegap.com/ns/1.0"
 	id          = "com.ovnylinedev.amsprofesionales"
-	version     = "1.6"
-	versionCode = "7" >
+	version     = "1.7"
+	versionCode = "8" >
 
 	<!-- v1.2: Cambio a de Mobincube a Phonegap (cli-6.5.0) -->
 	<!-- v1.3: Configuraciones y mejora de rendimiento -->
@@ -43,11 +43,12 @@
 	<!-- Plugins -->
 	<plugin name="cordova-plugin-battery-status"      source="npm" spec="~1.2.4" />
 	<plugin name="cordova-plugin-camera"              source="npm" spec="~2.4.1" />
-	<!-- <plugin name="cordova-plugin-media-capture"       source="npm" spec="~1.4.3" /> -->
-	<plugin name="cordova-plugin-device"              source="npm" spec="~1.1.6" >
 		<variable name="CAMERA_USAGE_DESCRIPTION" value="need camera access to take pictures / necesita acceso a la cámara para tomar fotos" />
 		<variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="need photo library access to get pictures from there / necesita acceso a la galería para tomar fotos" />
 	</plugin>
+	<plugin name="cordova-plugin-device"              source="npm" spec="~1.1.6" />
+	<plugin name="cordova-plugin-whitelist" 		source="npm" spec="~1.3.3" />
+	<!-- <plugin name="cordova-plugin-media-capture"       source="npm" spec="~1.4.3" /> -->
 	<!-- <plugin name="cordova-plugin-dialogs"             source="npm" spec="~1.3.3" /> -->
 	<!-- <plugin name="cordova-plugin-file"                source="npm" spec="~4.3.3" /> -->
 	<!-- <plugin name="cordova-plugin-geolocation"         source="npm" spec="~2.4.3" /> -->
@@ -55,7 +56,6 @@
 	<!-- <plugin name="cordova-plugin-inappbrowser"        source="npm" spec="~1.7.1" /> -->
 	<!-- <plugin name="cordova-plugin-network-information" source="npm" spec="~1.3.3" /> -->
 	<!-- <plugin name="cordova-plugin-vibration"           source="npm" spec="~2.1.5" /> -->
-	<plugin name="cordova-plugin-whitelist" 		source="npm" spec="~1.3.3" />
 
 	<!-- Iconos para cada plataforma -->
 	<icon src="resources/icons/icon.png" />
