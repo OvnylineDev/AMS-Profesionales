@@ -16,7 +16,7 @@
 
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="./resources/js/pg.js"></script>
-		
+
 	<script src="./resources/js/sp.js"></script>
 
 	<script src='./resources/tinymce/tinymce.min.js'></script>
@@ -141,6 +141,11 @@
 					<button id="aceptar" class="w3-button w3-block w3-green w3-cell w3-right">Aceptar</button>
 				</div>
 			</div>
+		</div>
+		<div id="modalexit" class="w3-light-grey w3-round w3-padding modal" style="width:100%;margin-bottom:16px">
+			<input id="dest" type="text" name="dest" style="display:none;" disabled="disabled">
+			<button id="exittrue" class="w3-button w3-block w3-green w3-cell w3-right">Salir</button>
+			<button id="exitfalse" class="w3-button w3-block w3-green w3-cell w3-right">Permanecer</button>
 		</div>
 		<!-- <div id="modalnombre" class="w3-light-grey w3-round w3-padding modal" style="width:100%;margin-bottom:16px">
 			<div class="campo">
@@ -401,8 +406,25 @@
 			});
 
 			$("#navegador > #sections > .sect").click(function() {
-				setDestinoNav($(this).attr('destino'));
+				//mostrar dialogo exit
+				if (parteEnviado()) {
+					setDestinoNav($(this).attr('destino'));
+				}else{
+					$('#dest').val($(this).attr('destino'));
+					$("#modalexit").show();
+				}
+
 			});
+
+			$("#exittrue").click(function() {
+				setDestinoNav($('#dest').val());
+			});
+
+			$("#exitfalse").click(function() {
+				$("#modalexit").hide();
+			});
+
+
 
 
 		});
@@ -706,6 +728,14 @@
 				});
 			}else{ //navigator
 				$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.');
+			}
+		}
+
+		function parteEnviado(){
+			if ($("#parte").html() === "") {
+				return true;
+			}else{
+				return false;
 			}
 		}
 	</script>
