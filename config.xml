@@ -2,14 +2,14 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap   = "http://phonegap.com/ns/1.0"
 	id          = "com.ovnylinedev.amsprofesionales"
-	version     = "1.7"
-	versionCode = "8" >
+	version     = "1.8"
+	versionCode = "9" >
 
 	<!-- v1.2: Cambio a de Mobincube a Phonegap (cli-6.5.0) -->
 	<!-- v1.3: Configuraciones y mejora de rendimiento -->
 
-	<name>AMS Profesionales</name>
-	<!-- <name>AMS Profesionales - Beta</name> -->
+	<!-- <name>AMS Profesionales</name> -->
+	<name>AMS Profesionales - Beta</name>
 
 	<description>
 		Aplicación para profesionales y empleados de Ávila Multiasistencia. Gestión de Visitas y Partes de Trabajo en Obras y Servicios.
