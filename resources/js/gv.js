@@ -35,12 +35,12 @@ const IMGTPNG = ["png","image/png"];
 // const APIURL		= 'https://amsconnect.ovnyline.net/.pruebasams/.YXBzYXBw/api.php';
 
 //TEST
-// const APIURL		= 'https://amsconnect.ovnyline.net/.test/.YXBzYXBw/api.php';
-// const SERVERURL	= 'https://amsconnect.ovnyline.net/.test/.YXBzYXBw/';
+const APIURL		= 'https://amsconnect.ovnyline.net/.test/.YXBzYXBw/api.php';
+const SERVERURL	= 'https://amsconnect.ovnyline.net/.test/.YXBzYXBw/';
 
 //FINAL
-const APIURL		= 'https://amsconnect.ovnyline.net/.YXBzYXBw/api.php';
-const SERVERURL	= 'https://amsconnect.ovnyline.net/.YXBzYXBw/';
+// const APIURL		= 'https://amsconnect.ovnyline.net/.YXBzYXBw/api.php';
+// const SERVERURL	= 'https://amsconnect.ovnyline.net/.YXBzYXBw/';
 
 
 
