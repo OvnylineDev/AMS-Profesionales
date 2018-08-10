@@ -100,15 +100,18 @@
      border: 2px solid #000;
 }
 
-.modal h4{
+.modal h4,
+.modalfull h4{
     width:95%
 }
 
-.modal .campo{
+.modal .campo,
+.modalfull .campo{
 	position: relative;
 }
 
-.modal .campo .close{
+.modal .campo .close,
+.modalfull .campo .close{
 	position: absolute;
      right:0;
 }
@@ -124,7 +127,7 @@
      text-align: center;
      display:table-cell;
      vertical-align:middle;
-     background-color: rgba(0, 0, 0, 0.6);
+     background-color: rgba(0, 0, 0, 0.6)!important;
 }
 
 .textfield {
