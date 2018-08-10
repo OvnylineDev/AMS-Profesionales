@@ -418,12 +418,6 @@
 					$("#modalexit").show();
 				}
 			});
-			$("#exittrue").click(function() {
-				setDestinoNav($('#dest').val());
-			});
-			$("#exitfalse").click(function() {
-				$("#modalexit").hide();
-			});
 
 
 		});
@@ -619,6 +613,25 @@
 			// }
 		});
 
+		$(document).on("click", '#modalexit', function(event) {
+			/*
+			$("#exittrue").click(function() {
+				setDestinoNav($('#dest').val());
+			});
+			$("#exitfalse").click(function() {
+				$("#modalexit").hide();
+			});
+			 */
+
+			alert($(this).attr('id'));
+
+			if ($(this).attr('id') === "exittrue") {
+				setDestinoNav($('#dest').val());
+			}else{
+				$("#modalexit").hide();
+			}
+		}
+
 		function rellenarparte(){
 			//realizar búsquedas y mostrarlas
 			if (navigator.onLine) {
@@ -731,10 +744,10 @@
 		}
 		function parteEnviado(){
 			if ($("#parte").html() === "") {
-				alert(true);
+				// alert(true);
 				return true;
 			}else{
-				alert(false);
+				// alert(false);
 				return false;
 			}
 		}
