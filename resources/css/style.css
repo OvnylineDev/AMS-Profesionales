@@ -113,6 +113,16 @@
      right:0;
 }
 
+.modalfull{
+	display: none;
+	width: 100%!important;
+	height: 100%!important;
+	position: fixed;
+	top: 0px;
+	/* margin: 0 20px; */
+     border: 2px solid #000;
+}
+
 .textfield {
 	width: 100%;
 	height: 200px;
