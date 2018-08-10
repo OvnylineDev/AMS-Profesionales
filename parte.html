@@ -747,7 +747,8 @@
 		}
 
 		function finCita(){
-			if (localStorage.getItem(LOCALFINCITA)) {
+			var flag = localStorage.getItem(LOCALSUBC) === '1';
+			if (flag) {
 				alert(true);
 				return true;
 			}else{

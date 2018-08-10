@@ -174,7 +174,7 @@
 		$(document).on("click", '.exp', function(event) {
 			if (tipo === TIPOEXPPEND) {
 				localStorage.setItem(LOCALIDEXPEST, $(this).attr('idexp'));
-				localStorage.setItem(LOCALFINCITA, false);
+				localStorage.setItem(LOCALFINCITA, "0");
 
 				window.location.href = "menup.html?token=" + token +
 					"&idSerie=" + $(this).attr('idSerie') +
