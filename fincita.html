@@ -15,7 +15,7 @@
 
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="./resources/js/pg.js"></script>
-		
+
 	<script src="./resources/js/sp.js"></script>
 	<link href="./resources/css/w3.css" rel="stylesheet">
 	<link href="./resources/css/style.css" rel="stylesheet">
@@ -196,6 +196,7 @@
 								}
 							}
 							if (jsonrespuesta.status == "OK") {
+								localStorage.setItem(LOCALFINCITA, true);
 								setDestinoTop("principal.html");
 							}
 						},

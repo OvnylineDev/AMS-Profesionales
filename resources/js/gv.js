@@ -12,6 +12,7 @@ const LOCALSUBC	= "gv_subcontrata"
 const LOCALTIMEACC 	= "gv_time";
 const LOCALTOKEN 	= "gv_token";
 const LOCALIDEXPEST	= "gv_idexp";
+const LOCALFINCITA	= "gv_fincita";
 const LOCALIDINCID	= "gv_idincid";
 const LOCALTIPOPARTE= "gv_tipoparte";
 
