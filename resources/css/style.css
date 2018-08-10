@@ -121,6 +121,10 @@
 	top: 0px;
 	/* margin: 0 20px; */
      border: 2px solid #000;
+     text-align: center;
+     display:table-cell;
+     vertical-align:middle;
+     background-color: rgba(0, 0, 0, 0.6);
 }
 
 .textfield {
