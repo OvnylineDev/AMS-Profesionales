@@ -122,12 +122,9 @@
 	height: 100%!important;
 	position: fixed;
 	top: 0px;
-	/* margin: 0 20px; */
+     padding-top:10%;
      border: 2px solid #000;
-     text-align: center;
-     display:table-cell;
-     vertical-align:middle;
-     background-color: rgba(0, 0, 0, 0.6)!important;
+     background-color: rgba(255, 255, 255, 0.8)!important;
 }
 
 .textfield {
