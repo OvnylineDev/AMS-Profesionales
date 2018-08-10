@@ -128,8 +128,8 @@
 }
 
 #exitframe{
-     height: 100px;
-     width: 100px;
+     height: 100%;
+     width: 100%;
      margin:10px;
      text-align: center;
      display:table-cell;
