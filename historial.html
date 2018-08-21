@@ -86,6 +86,7 @@
 	<div id="modalexit" class="w3-light-grey w3-round w3-padding modalfull" style="width:100%;margin-bottom:16px">
 		<div id="exitframe" class="campo">
 			<input id="dest" type="text" name="dest" style="display:none;" disabled="disabled">
+			<input id="type" type="text" name="dest" style="display:none;" disabled="disabled">
 			<h4 id="mensaje"></h4>
 			<button id="exittrue" class="w3-button w3-block w3-green w3-cell w3-right" style="width:50%">Salir</button>
 			<button id="exitfalse" class="w3-button w3-block w3-red w3-cell w3-right" style="width:50%">Permanecer</button>
@@ -270,6 +271,30 @@
 			$(".close").click(function() {
 				$(this).parent(".campo").parent(".modal").hide();
 			});
+		});
+
+		$(document).on("click", '#modalexit *', function(event) {
+			// alert($(this).attr('id'));
+
+			if ($(this).attr('id') === "exittrue") {
+				event.stopPropagation();
+				// setDestinoNav($('#dest').val());
+				switch ($('#type').val()) {
+					case "setDestinoNav":
+						setDestinoNav($('#dest').val());
+						break;
+					case "setDestinoTop":
+						setDestinoTop($('#dest').val());
+						break;
+					default:
+						event.stopPropagation();
+						$("#modalexit").hide();
+
+				}
+			}else{
+				event.stopPropagation();
+				$("#modalexit").hide();
+			}
 		});
 	</script>
 </body>

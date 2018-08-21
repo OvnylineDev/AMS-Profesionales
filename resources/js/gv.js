@@ -321,6 +321,7 @@ function salirSection(flag, destino){
      }else{
           $('#mensaje').html("Todavía no ha enviado la información introducida, ¿seguro que desea salir de esta sección?");
           $('#dest').val(destino);
+          $('#type').val("setDestinoNav");
           $("#modalexit").show();
      }
 }
@@ -331,6 +332,7 @@ function salirExped(flag, destino){
      }else{
           $('#mensaje').html("Pulsando esta opción se sale del siniestro actual sin haber realizado el fin de cita, ¿seguro que desea salir de esta sección?");
           $('#dest').val(destino);
+          $('#type').val("setDestinoTop");
           $("#modalexit").show();
      }
 }
