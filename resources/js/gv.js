@@ -319,7 +319,7 @@ function salirSection(flag, destino){
      if (flag) {
           setDestinoNav(destino);
      }else{
-          $('#mensaje').html("Todavía no ha enviado el parte, ¿seguro que desea salir de esta sección?");
+          $('#mensaje').html("Todavía no ha enviado la información introducida, ¿seguro que desea salir de esta sección?");
           $('#dest').val(destino);
           $("#modalexit").show();
      }
@@ -333,4 +333,17 @@ function salirExped(flag, destino){
           $('#dest').val(destino);
           $("#modalexit").show();
      }
+}
+
+function finCita(){
+	var flag = localStorage.getItem(LOCALFINCITA) === '1';
+	// alert(flag + " " + localStorage.getItem(LOCALFINCITA));
+
+	if (flag) {
+		// alert(true);
+		return true;
+	}else{
+		// alert(false);
+		return false;
+	}
 }
