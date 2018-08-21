@@ -315,22 +315,22 @@ function isImage(imgtype){
 // 	}
 // }
 
-function salirSection(flag){
+function salirSection(flag, destino){
      if (flag) {
-          setDestinoNav($(this).attr('destino'));
+          setDestinoNav(destino);
      }else{
           $('#mensaje').html("Todavía no ha enviado el parte, ¿seguro que desea salir de esta sección?");
-          $('#dest').val($(this).attr('destino'));
+          $('#dest').val(destino);
           $("#modalexit").show();
      }
 }
 
-function salirExped(flag){
+function salirExped(flag, destino){
      if (flag) {
-          setDestinoTop($(this).attr('destino'));
+          setDestinoTop(destino);
      }else{
           $('#mensaje').html("Pulsando esta opción se sale del siniestro actual sin haber realizado el fin de cita, ¿seguro que desea salir de esta sección?");
-          $('#dest').val($(this).attr('destino'));
+          $('#dest').val(destino);
           $("#modalexit").show();
      }
 }
