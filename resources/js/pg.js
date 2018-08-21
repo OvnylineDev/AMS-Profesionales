@@ -111,23 +111,3 @@ function getURL() {
      var filename = url.substring(url.lastIndexOf('/')+1);
      return filename;
 }
-
-function salirSection(flag){
-     if (flag) {
-          setDestinoNav($(this).attr('destino'));
-     }else{
-          $('#mensaje').html("Todavía no ha enviado el parte, ¿seguro que desea salir de esta sección?");
-          $('#dest').val($(this).attr('destino'));
-          $("#modalexit").show();
-     }
-}
-
-function salirExped(flag){
-     if (flag) {
-          setDestinoTop($(this).attr('destino'));
-     }else{
-          $('#mensaje').html("Pulsando esta opción se sale del siniestro actual sin haber realizado el fin de cita, ¿seguro que desea salir de esta sección?");
-          $('#dest').val($(this).attr('destino'));
-          $("#modalexit").show();
-     }
-}

@@ -409,7 +409,7 @@
 			// });
 			//
 			$("#login > .opt").click(function() {
-				salirExped(finCita());
+				salirExped(finCita()); //setDestinoTop
 			});
 
 			// $("#navegador > #sections > .sect").click(function() {
@@ -417,7 +417,7 @@
 			// });
 			$("#navegador > #sections > .sect").click(function() {
 				//mostrar dialogo exit
-				salirSection(parteEnviado());
+				salirSection(parteEnviado()); //setDestinoNav
 			});
 
 
@@ -747,7 +747,9 @@
 		}
 
 		function finCita(){
-			var flag = localStorage.getItem(LOCALSUBC) === '1';
+			var flag = localStorage.getItem(LOCALFINCITA) === '1';
+			alert(flag + " " + localStorage.getItem(LOCALFINCITA));
+
 			if (flag) {
 				alert(true);
 				return true;
