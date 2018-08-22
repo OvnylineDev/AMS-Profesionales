@@ -59,9 +59,9 @@ function onBackKeyDown() {
           		"&numeroOrden=" + numeroOrden;
           break;
           case "parte.html":
-               window.location.href = "menup.html" + "?token=" + token +
-          		"&idSerie=" + idSerie +
-          		"&numeroOrden=" + numeroOrden;
+
+               salirSection(parteEnviado(), "menup.html");
+
           break;
           case "fincita.html":
                window.location.href = "menup.html" + "?token=" + token +

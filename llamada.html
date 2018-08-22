@@ -15,7 +15,7 @@
 
 	<script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="./resources/js/pg.js"></script>
-		
+
 	<script src="./resources/js/sp.js"></script>
 
 	<script src="./resources/datepicker/datepicker.js"></script>
@@ -150,6 +150,15 @@
 		<div>
 			<h4>Introduzca las observaciones de la llamada</h4>
 			<textarea id="textcita" class="textfield" cols="30" rows="8"></textarea>
+		</div>
+	</div>
+	<div id="modalexit" class="w3-light-grey w3-round w3-padding modalfull" style="width:100%;margin-bottom:16px">
+		<div id="exitframe" class="campo">
+			<input id="dest" type="text" name="dest" style="display:none;" disabled="disabled">
+			<input id="type" type="text" name="dest" style="display:none;" disabled="disabled">
+			<h4 id="mensaje"></h4>
+			<button id="exittrue" class="w3-button w3-block w3-green w3-cell w3-right" style="width:50%">Salir</button>
+			<button id="exitfalse" class="w3-button w3-block w3-red w3-cell w3-right" style="width:50%">Permanecer</button>
 		</div>
 	</div>
 	<script>
@@ -509,13 +518,19 @@
 				}
 			});
 
+			// $("#login > .opt").click(function() {
+			// 	setDestinoTop($(this).attr('destino'));
+			// });
+
 			$("#login > .opt").click(function() {
-				setDestinoTop($(this).attr('destino'));
+				salirExped(finCita(), $(this).attr('destino')); //setDestinoTop
 			});
 
 			$("#navegador > #sections > .sect").click(function() {
 				setDestinoNav($(this).attr('destino'));
 			});
+
+
 
 			$("#activechange").click(function() {
 				if ($(this).prop('checked')) {

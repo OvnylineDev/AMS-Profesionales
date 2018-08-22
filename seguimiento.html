@@ -181,7 +181,7 @@
 			//
 			$("#navegador > #sections > .sect").click(function() {
 				//mostrar dialogo exit
-				salirSection(haySeg(), $(this).attr('destino')); //setDestinoNav
+				salirSection(!haySeg(), $(this).attr('destino')); //setDestinoNav
 			});
 
 			$('#textob').keyup(function() {

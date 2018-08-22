@@ -689,7 +689,7 @@
 
 			$("#navegador > #sections > .sect").click(function() {
 				//mostrar dialogo exit
-				salirSection(hayFotos(), $(this).attr('destino')); //setDestinoNav
+				salirSection(!hayFotos(), $(this).attr('destino')); //setDestinoNav
 			});
 
 			function optionSelected(op, selected){
