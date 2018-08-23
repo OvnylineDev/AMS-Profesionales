@@ -31,7 +31,8 @@ function onBackKeyDown() {
                window.location.href = "principal.html" + "?token=" + token;
           break;
           case "menup.html":
-               window.location.href = "principal.html" + "?token=" + token;
+               // window.location.href = "principal.html" + "?token=" + token;
+               salirExped(finCita(), "principal.html");
           break;
           case "llamada.html":
                window.location.href = "menup.html" + "?token=" + token +
@@ -44,24 +45,28 @@ function onBackKeyDown() {
           		"&numeroOrden=" + numeroOrden;
           break;
           case "seguimiento.html":
-               window.location.href = "menup.html" + "?token=" + token +
-          		"&idSerie=" + idSerie +
-          		"&numeroOrden=" + numeroOrden;
+               // window.location.href = "menup.html" + "?token=" + token +
+          	// 	"&idSerie=" + idSerie +
+          	// 	"&numeroOrden=" + numeroOrden;
+          	salirSection(haySeg(), "menup.html");
           break;
           case "foto.html":
-               window.location.href = "menup.html" + "?token=" + token +
-          		"&idSerie=" + idSerie +
-          		"&numeroOrden=" + numeroOrden;
+               // window.location.href = "menup.html" + "?token=" + token +
+          	// 	"&idSerie=" + idSerie +
+          	// 	"&numeroOrden=" + numeroOrden;
+          	salirSection(hayFotos(), "menup.html");
           break;
           case "planos.html":
-               window.location.href = "menup.html" + "?token=" + token +
-          		"&idSerie=" + idSerie +
-          		"&numeroOrden=" + numeroOrden;
+               // window.location.href = "menup.html" + "?token=" + token +
+          	// 	"&idSerie=" + idSerie +
+          	// 	"&numeroOrden=" + numeroOrden;
+               salirSection(hayFotos(), "menup.html");
           break;
           case "parte.html":
-
+               // window.location.href = "menup.html" + "?token=" + token +
+               // 	"&idSerie=" + idSerie +
+               // 	"&numeroOrden=" + numeroOrden;
                salirSection(parteEnviado(), "menup.html");
-
           break;
           case "fincita.html":
                window.location.href = "menup.html" + "?token=" + token +

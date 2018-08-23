@@ -359,7 +359,6 @@
 				//mostrar dialogo exit
 				salirSection(!hayFotos(), $(this).attr('destino')); //setDestinoNav
 			});
-
 		});
 
 		$(document).on("click", '.close', function(event) {
@@ -373,29 +372,29 @@
 			}
 		});
 
-		$(document).on("click", '#modalexit *', function(event) {
-			// alert($(this).attr('id'));
-
-			if ($(this).attr('id') === "exittrue") {
-				event.stopPropagation();
-				// setDestinoNav($('#dest').val());
-				switch ($('#type').val()) {
-					case "setDestinoNav":
-						setDestinoNav($('#dest').val());
-						break;
-					case "setDestinoTop":
-						setDestinoTop($('#dest').val());
-						break;
-					default:
-						event.stopPropagation();
-						$("#modalexit").hide();
-
-				}
-			}else{
-				event.stopPropagation();
-				$("#modalexit").hide();
-			}
-		});
+		// $(document).on("click", '#modalexit *', function(event) {
+		// 	// alert($(this).attr('id'));
+		//
+		// 	if ($(this).attr('id') === "exittrue") {
+		// 		event.stopPropagation();
+		// 		// setDestinoNav($('#dest').val());
+		// 		switch ($('#type').val()) {
+		// 			case "setDestinoNav":
+		// 				setDestinoNav($('#dest').val());
+		// 				break;
+		// 			case "setDestinoTop":
+		// 				setDestinoTop($('#dest').val());
+		// 				break;
+		// 			default:
+		// 				event.stopPropagation();
+		// 				$("#modalexit").hide();
+		//
+		// 		}
+		// 	}else{
+		// 		event.stopPropagation();
+		// 		$("#modalexit").hide();
+		// 	}
+		// });
 
 		/*phonegap*/
 		document.addEventListener("deviceready", readyForCam, false);

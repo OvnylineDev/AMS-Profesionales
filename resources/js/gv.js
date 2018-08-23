@@ -45,6 +45,35 @@ const SERVERURL	= 'https://amsconnect.ovnyline.net/.YXBzYXBw/';
 
 
 
+$(document).on("click", '#modalexit *', function(event) {
+	// alert($(this).attr('id'));
+
+	if ($(this).attr('id') === "exittrue") {
+		event.stopPropagation();
+		// setDestinoNav($('#dest').val());
+		switch ($('#type').val()) {
+			case "setDestinoNav":
+				setDestinoNav($('#dest').val());
+				break;
+			case "setDestinoTop":
+				setDestinoTop($('#dest').val());
+				break;
+			case "setDestinoInci":
+				setDestinoTop($('#dest').val());
+				break;
+			default:
+				event.stopPropagation();
+				$("#modalexit").hide();
+
+		}
+	}else{
+		event.stopPropagation();
+		$("#modalexit").hide();
+	}
+});
+
+
+
 function gv_get_URL_parameter(sParam)
 {
 	var sPageURL = window.location.search.substring(1);
@@ -322,6 +351,17 @@ function salirSection(flag, destino){
           $('#mensaje').html("Todavía no ha enviado la información introducida, ¿seguro que desea salir de esta sección?");
           $('#dest').val(destino);
           $('#type').val("setDestinoNav");
+          $("#modalexit").show();
+     }
+}
+
+function salirSectionInci(flag, destino){
+     if (flag) {
+          setDestinoInci(destino);
+     }else{
+          $('#mensaje').html("Todavía no ha enviado la información introducida, ¿seguro que desea salir de esta sección?");
+          $('#dest').val(destino);
+          $('#type').val("setDestinoInci");
           $("#modalexit").show();
      }
 }
