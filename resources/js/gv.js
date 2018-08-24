@@ -389,3 +389,7 @@ function finCita(){
 		return false;
 	}
 }
+
+function mostrarNotificacion(mensaje){
+	
+}
