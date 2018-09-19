@@ -1,5 +1,5 @@
 var url = "";
-var cam = ["foto.html", "fest-foto.html", "fest-foto.html"];
+var cam = ["fotoasync.html", "fest-foto.html", "fest-foto.html"];
 
 //events
 // Wait for device API libraries to load
@@ -50,7 +50,7 @@ function onBackKeyDown() {
           	// 	"&numeroOrden=" + numeroOrden;
           	salirSection(haySeg(), "menup.html");
           break;
-          case "foto.html":
+          case "fotoasync.html":
                // window.location.href = "menup.html" + "?token=" + token +
           	// 	"&idSerie=" + idSerie +
           	// 	"&numeroOrden=" + numeroOrden;

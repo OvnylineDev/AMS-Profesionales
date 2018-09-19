@@ -73,21 +73,21 @@
 
 		<div id="navegador" class="w3-cell-row w3-center" style="width:100%">
 			<div class="topnav" id="sections">
-				<a class="sect" destino="val-general.html">Valoración/Presupuesto</a>
+				<a class="sect disabled" destino="fotoasync.html">Fotografías</a>
 				<a class="sect" destino="llamada.html">Llamada</a>
 				<a class="sect" destino="historial.html">Historial</a>
-				<a class="sect" destino="llamada.html">Observaciones</a>
-				<a class="sect" destino="fotoasync.html">Fotografías</a>
+				<a class="sect" destino="seguimiento.html">Observaciones</a>
 				<a class="sect" destino="planos.html">Planos/Diseños</a>
 				<a class="sect" destino="parte.html">Parte Final</a>
 				<a class="sect" destino="fincita.html">Fin Cita</a>
+				<a id="val" class="sect" destino="val-general.html">Valoración/Presupuesto</a>
 				<a href="javascript:void(0);" class="icon" onclick="showTopNav()"><i class="fa fa-bars" aria-hidden="true"></i></a>
 			</div>
 		</div>
 
 		<div class="w3-light-grey w3-round w3-padding" style="width:100%;margin-bottom:16px;overflow: hidden">
 			<div class="w3-cell-row w3-padding-16">
-				<h4>Enviar Fotografías de la Valoración/Presupuesto</h4>
+				<h4>Enviar Fotografías</h4>
 				<i id="cam" class="fa fa-camera"></i>
 				<i id="selbut" class="fa fa-image"></i><br /><span id="numimg">No hay imágenes seleccionadas</span>
 				<input id="fileupload" name="img" type="file" accept="image/jpeg" multiple/>
@@ -140,12 +140,6 @@
 
 			$("#titulo").html("EXPEDIENTE " + idSerie + " " + numeroOrden);
 
-			var flag = localStorage.getItem(LOCALSUBC) === '1';
-
-			if (!flag) {
-				window.location.href = "principal.html";
-			}
-
 
 			//eventos
 
@@ -180,7 +174,7 @@
 				var filedescs = [];
 				var filenames = [];
 				var datephoto = [];
-				var filetipe = FILEVAL;
+				var filetipe = FILEFOTO;
 				var datetxt = myDate.getDate() + "-" + (myDate.getMonth() + 1);
 				var genName = "";
 
@@ -219,7 +213,7 @@
 
 					if (navigator.onLine) {
 						var params = {
-							"op": "subirarch",
+							"op": "subirasync",
 							"token": token,
 							"idSerie": idSerie,
 							"numeroOrden": numeroOrden,
@@ -230,7 +224,7 @@
 							"datephoto": datephoto,
 							"filedata": filedata,
 							"filext": filext,
-							"tipofichero": getCleanedString(FILEVALC),
+							"tipofichero": getCleanedString(FILEFOTO),
 							"datetxt": datetxt
 						};
 

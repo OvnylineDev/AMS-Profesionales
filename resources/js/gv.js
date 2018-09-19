@@ -28,6 +28,10 @@ const FILEPRES		= "PRESUPUESTOS";
 const FILEPARTE	= "PARTES";
 const FILEPARTEA	= "PARTE";
 
+const NOTIFGREEN	= "w3-red";
+const NOTIFYELL	= "w3-yellow";
+const NOTIFRED		= "w3-green";
+
 // $IMGTYPES=array("pjpeg"=>"image/pjpeg","svg+xml"=>"image/svg+xml","tiff"=>"image/tiff","vnd.microsoft.icon"=>"image/vnd.microsoft.icon");
 const IMGTGIF = ["gif","image/gif"];
 const IMGTJPEG = ["jpeg","image/jpeg"];
@@ -36,12 +40,12 @@ const IMGTPNG = ["png","image/png"];
 // const APIURL		= 'https://amsconnect.ovnyline.net/.pruebasams/.YXBzYXBw/api.php';
 
 //TEST
-// const APIURL		= 'https://amsconnect.ovnyline.net/.test/.YXBzYXBw/api.php';
-// const SERVERURL	= 'https://amsconnect.ovnyline.net/.test/.YXBzYXBw/';
+const APIURL		= 'https://amsconnect.ovnyline.net/.test/.YXBzYXBw/api.php';
+const SERVERURL	= 'https://amsconnect.ovnyline.net/.test/.YXBzYXBw/';
 
 //FINAL
-const APIURL		= 'https://amsconnect.ovnyline.net/.YXBzYXBw/api.php';
-const SERVERURL	= 'https://amsconnect.ovnyline.net/.YXBzYXBw/';
+// const APIURL		= 'https://amsconnect.ovnyline.net/.YXBzYXBw/api.php';
+// const SERVERURL	= 'https://amsconnect.ovnyline.net/.YXBzYXBw/';
 
 
 
@@ -390,6 +394,35 @@ function finCita(){
 	}
 }
 
-function mostrarNotificacion(mensaje){
-	
+function mostrarNotificacion(mensaje, tipo){
+	var UID = "message-" + Math.floor(Math.random() * 999999);
+	var thisDate = new Date();
+	var hour = thisDate.getHours() + ":" + thisDate.getMinutes();
+
+	var newMessage = document.createElement("div");
+	var newContent = document.createTextNode(hour + " - " + mensaje);
+	newMessage.id = UID;
+	newMessage.classList.add(tipo, "w3-round");
+	newMessage.appendChild(newContent); //añade texto al div creado.
+
+	// añade el elemento creado y su contenido al DOM
+	var notifications = document.getElementById("notificaciones");
+	// notifications.appendChild(newMessage);
+	notifications.insertBefore(newMessage, notifications.firstChild);
+
+	$("#"+UID).fadeIn(1000);
+
+	setTimeout(function() {
+        $("#"+UID).fadeOut(1000, function() {
+        	notifications.removeChild(newMessage);
+        });
+   	},5000);
 }
+
+/*
+$(document).ready(function() {
+    setTimeout(function() {
+        $(".content2").fadeIn(1500);
+    },3000);
+});
+ */
