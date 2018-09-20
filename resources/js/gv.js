@@ -413,13 +413,13 @@ function mostrarNotificacion(mensaje, tipo){
 	 */
 
 	switch (tipo) {
-		case NOTIFGREEN:
+		case NOTIFRED:
 			newMessage.classList.add("w3-red", "notif-red", "w3-round");
 			break;
 		case NOTIFYELL:
 			newMessage.classList.add("w3-yellow", "notif-yellow", "w3-round");
 		break;
-		case NOTIFRED:
+		case NOTIFGREEN:
 			newMessage.classList.add("w3-green", "notif-green", "w3-round");
 		break;
 		default:
