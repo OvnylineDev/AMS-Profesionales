@@ -110,7 +110,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="modalexit" class="w3-light-grey w3-round w3-padding modalfull" style="width:100%;margin-bottom:16px">
 		<div id="exitframe" class="campo">
 			<input id="dest" type="text" name="dest" style="display:none;" disabled="disabled">
@@ -165,7 +165,8 @@
 			$("#send").click(function() {
 				var files = $('#imagesel canvas');
 				if (files.length == 0) {
-					$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Seleccione alguna imagen.');
+					// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Seleccione alguna imagen.');
+					mostrarNotificacion('Seleccione alguna imagen.', NOTIFYELL);
 				}else{
 					$('#aceptxt').prop( "disabled", true );
 					$('#genName').val("");
@@ -353,7 +354,8 @@
 						reader.readAsDataURL(files[i]);
 						$("#info").html('');
 					}else{
-						$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Solo las imágenes son aceptadas.');
+						// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Solo las imágenes son aceptadas.');
+						mostrarNotificacion('Solo las imágenes son aceptadas.', NOTIFYELL);
 					}
 				}
 			});
