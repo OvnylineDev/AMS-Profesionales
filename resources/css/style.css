@@ -140,6 +140,42 @@
     display: none;
 }
 
+.notif-red,
+.notif-yellow,
+.notif-green{
+     font-size: 10px;
+}
+
+.notif-red::before,
+.notif-yellow::before,
+.notif-green::before{
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+/*--adjust as necessary--*/
+    color: #000;
+    font-size: 10px;
+    padding-right: 0.5em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+.notif-red::before{
+     content: "\f06a";
+     color:#fff!important;background-color:#f44336!important
+}
+
+.notif-yellow::before{
+     content: "\f06a";
+     color:#000!important;background-color:#ffeb3b!important
+}
+
+.notif-green::before{
+     content: "\f06a";
+     color:#fff!important;background-color:#4CAF50!important
+}
+
 #exitframe{
      height: 100%;
      width: 100%;
@@ -241,39 +277,6 @@
    display: inline;
    padding: 0 16px;
    margin: 0 5px;
-}
-
-.notif-red,
-.notif-yellow,
-.notif-green{
-     font-size: 10px;
-}
-
-.notif-red::before,
-.notif-yellow::before,
-.notif-green::before{
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-/*--adjust as necessary--*/
-    color: #000;
-    font-size: 18px;
-    padding-right: 0.5em;
-    position: absolute;
-    top: 10px;
-    left: 0;
-}
-.notif-red::before{
-     content: "\f06a";
-}
-
-.notif-yellow::before{
-     content: "\f06a";
-}
-
-.notif-green::before{
-     content: "\f06a";
 }
 
 /* Hide the link that should open and close the topnav on small screens */

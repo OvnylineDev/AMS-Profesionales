@@ -397,7 +397,7 @@ function finCita(){
 function mostrarNotificacion(mensaje, tipo){
 	var UID = "message-" + Math.floor(Math.random() * 999999);
 	var thisDate = new Date();
-	var hour = thisDate.getHours() + ":" + thisDate.getMinutes();
+	var hour = (thisDate.getHours()<10?'0':'') + thisDate.getHours() + ":" + (thisDate.getMinutes()<10?'0':'') + thisDate.getMinutes();
 
 	var newMessage = document.createElement("div");
 	var newContent = document.createTextNode(hour + " - " + mensaje);
@@ -411,7 +411,7 @@ function mostrarNotificacion(mensaje, tipo){
 	const NOTIFYELL	= "EX";
 	const NOTIFRED		= "OK";
 	 */
-	
+
 	switch (tipo) {
 		case NOTIFGREEN:
 			newMessage.classList.add("w3-red", "notif-red", "w3-round");
@@ -439,7 +439,7 @@ function mostrarNotificacion(mensaje, tipo){
         $("#"+UID).fadeOut(1000, function() {
         	notifications.removeChild(newMessage);
         });
-   	},5000);
+   },10000);
 }
 
 /*
