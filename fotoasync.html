@@ -89,7 +89,7 @@
 			<div class="w3-cell-row w3-padding-16">
 				<h4>Enviar Fotografías</h4>
 				<i id="cam" class="fa fa-camera"></i>
-				<i id="gall" class="fa fa-image"></i>
+				<!-- <i id="gall" class="fa fa-image"></i> -->
 				<i id="selbut" class="fa fa-image"></i><br /><span id="numimg">No hay imágenes seleccionadas</span>
 				<input id="fileupload" name="img" type="file" accept="image/jpeg" multiple="multiple"/>
 				<span id="imagesel">
@@ -396,9 +396,10 @@
 		function readyForCam(){
 			// alert("readyForCam");
 			var cambutton = document.getElementById("cam");
-			var cambutton = document.getElementById("gall");
-		     cambutton.addEventListener("click", openCamera, false);
-		     cambutton.addEventListener("click", openGallery, false);
+			cambutton.addEventListener("click", openCamera, false);
+
+			// var cambutton = document.getElementById("gall");
+		     // cambutton.addEventListener("click", openGallery, false);
 		}
 
 		function openCamera(){
