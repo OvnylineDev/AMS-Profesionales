@@ -28,9 +28,9 @@ const FILEPRES		= "PRESUPUESTOS";
 const FILEPARTE	= "PARTES";
 const FILEPARTEA	= "PARTE";
 
-const NOTIFGREEN	= "w3-red";
-const NOTIFYELL	= "w3-yellow";
-const NOTIFRED		= "w3-green";
+const NOTIFGREEN	= "w3-red notif-red";
+const NOTIFYELL	= "w3-yellow notif-yellow";
+const NOTIFRED		= "w3-green notif-green";
 
 // $IMGTYPES=array("pjpeg"=>"image/pjpeg","svg+xml"=>"image/svg+xml","tiff"=>"image/tiff","vnd.microsoft.icon"=>"image/vnd.microsoft.icon");
 const IMGTGIF = ["gif","image/gif"];

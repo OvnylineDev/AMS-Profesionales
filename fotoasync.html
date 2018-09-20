@@ -251,14 +251,14 @@
 									switch (jsonrespuesta.error) {
 										case "10":
 											// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + jsonrespuesta.message + '.');
-											mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + jsonrespuesta.message + '.', NOTIFYELL);
+											mostrarNotificacion(jsonrespuesta.message, NOTIFYELL);
 											break;
 										case "99":
 											logout(token,localStorage.getItem(LOCALIDOP));
 											break;
 										default:
 											// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación');;
-											mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación', NOTIFYELL);
+											mostrarNotificacion('Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación', NOTIFYELL);
 									}
 								}
 								if (jsonrespuesta.status == "OK") {
@@ -271,16 +271,16 @@
 							},
 							error: function(jqXHR, textStatus, errorThrown) {
 								// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Error de acceso. El servidor no responde.');
-								mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Error de acceso. El servidor no responde.', NOTIFRED);
+								mostrarNotificacion('Error de acceso. El servidor no responde.', NOTIFRED);
 							},
 						});
 					}else{ //navigator
 						// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.');
-						mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.', NOTIFRED);
+						mostrarNotificacion('Conexión a Internet no disponible, por favor inténtelo más tarde.', NOTIFRED);
 					}
 				} else {
 					// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Seleccione alguna imagen.');
-					mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Seleccione alguna imagen.', NOTIFYELL);
+					mostrarNotificacion('Seleccione alguna imagen.', NOTIFYELL);
 				}
 
 			});
