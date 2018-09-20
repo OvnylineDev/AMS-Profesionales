@@ -248,7 +248,7 @@
 							dataType: "json",
 							crossDomain: true,
 						     cache:false,
-							async:true,
+							async:false,
 							success: function(jsonrespuesta) {
 								if (jsonrespuesta.status == "KO") {
 									switch (jsonrespuesta.error) {
@@ -396,7 +396,9 @@
 		function readyForCam(){
 			// alert("readyForCam");
 			var cambutton = document.getElementById("cam");
+			var cambutton = document.getElementById("gall");
 		     cambutton.addEventListener("click", openCamera, false);
+		     cambutton.addEventListener("click", openGallery, false);
 		}
 
 		function openCamera(){
@@ -409,12 +411,6 @@
 		          mediaType: Camera.MediaType.PICTURE,
 		          saveToPhotoAlbum: true
 		     });
-		}
-
-		function readyForGall(){
-			// alert("readyForCam");
-			var cambutton = document.getElementById("gall");
-		     cambutton.addEventListener("click", openGallery, false);
 		}
 
 		function openGallery(){
@@ -430,53 +426,55 @@
 		}
 
 		function onSuccess(imageURI) {
-			var myDate = new Date();
-			var imgs = $('#imagesel canvas');
+			for (var i = 0; i < 20; i++) {
+				var myDate = new Date();
+				var imgs = $('#imagesel canvas');
 
-			pos++;
+				pos++;
 
-			var cont = document.createElement("DIV");
-			cont.id = pos;
-			cont.className = "imgs";
+				var cont = document.createElement("DIV");
+				cont.id = pos;
+				cont.className = "imgs";
 
-			var i = document.createElement("I");
-			i.className = "fa fa-times close";
-			// // i.aria-hidden = "true";
+				var i = document.createElement("I");
+				i.className = "fa fa-times close";
+				// // i.aria-hidden = "true";
 
-			var text = document.createElement("TEXTAREA");
-			text.className = "textfield";
+				var text = document.createElement("TEXTAREA");
+				text.className = "textfield";
 
-			var dateTxt = document.createElement("SPAN");
-			dateTxt.className = "datetxt";
-			dateTxt.append(convertdatesql(myDate));
+				var dateTxt = document.createElement("SPAN");
+				dateTxt.className = "datetxt";
+				dateTxt.append(convertdatesql(myDate));
 
-			var img = new Image();
-			img.src = imageURI;
+				var img = new Image();
+				img.src = imageURI;
 
-			var canvas = document.createElement("canvas");
+				var canvas = document.createElement("canvas");
 
-			img.onload = function () {
-				var value = 40;
+				img.onload = function () {
+					var value = 40;
 
-				// RESIZE THE IMAGES ONE BY ONE.
-				img.width = (img.width * value) / 100
-				img.height = (img.height * value) / 100
+					// RESIZE THE IMAGES ONE BY ONE.
+					img.width = (img.width * value) / 100
+					img.height = (img.height * value) / 100
 
-				var ctx = canvas.getContext("2d");
-				ctx.clearRect(0, 0, canvas.width, canvas.height);
-				canvas.width = img.width;
-				canvas.height = img.height;
-				ctx.drawImage(img, 0, 0, img.width, img.height);
+					var ctx = canvas.getContext("2d");
+					ctx.clearRect(0, 0, canvas.width, canvas.height);
+					canvas.width = img.width;
+					canvas.height = img.height;
+					ctx.drawImage(img, 0, 0, img.width, img.height);
+				}
+
+				cont.appendChild(i);
+				cont.appendChild(canvas);
+				cont.appendChild(text);
+				cont.appendChild(dateTxt);
+
+				$('#imagesel').append(cont);
+				$('#numimg').html((1 + imgs.length) + " Imágenes Seleccionadas");
+				// $('#imagesel').append("<div id='" + pos + "' class='imgs'><i class='fa fa-times close' aria-hidden='true'></i><img src='" + dataimg + "'/><textarea class='textfield' cols='30' rows='8'></textarea></div>");
 			}
-
-			cont.appendChild(i);
-			cont.appendChild(canvas);
-			cont.appendChild(text);
-			cont.appendChild(dateTxt);
-
-			$('#imagesel').append(cont);
-			$('#numimg').html((1 + imgs.length) + " Imágenes Seleccionadas");
-			// $('#imagesel').append("<div id='" + pos + "' class='imgs'><i class='fa fa-times close' aria-hidden='true'></i><img src='" + dataimg + "'/><textarea class='textfield' cols='30' rows='8'></textarea></div>");
 		}
 
 		function onFail(message) {
