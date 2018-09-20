@@ -28,9 +28,9 @@ const FILEPRES		= "PRESUPUESTOS";
 const FILEPARTE	= "PARTES";
 const FILEPARTEA	= "PARTE";
 
-const NOTIFGREEN	= "w3-red notif-red";
-const NOTIFYELL	= "w3-yellow notif-yellow";
-const NOTIFRED		= "w3-green notif-green";
+const NOTIFGREEN	= "WR";
+const NOTIFYELL	= "EX";
+const NOTIFRED		= "OK";
 
 // $IMGTYPES=array("pjpeg"=>"image/pjpeg","svg+xml"=>"image/svg+xml","tiff"=>"image/tiff","vnd.microsoft.icon"=>"image/vnd.microsoft.icon");
 const IMGTGIF = ["gif","image/gif"];
@@ -402,7 +402,30 @@ function mostrarNotificacion(mensaje, tipo){
 	var newMessage = document.createElement("div");
 	var newContent = document.createTextNode(hour + " - " + mensaje);
 	newMessage.id = UID;
-	newMessage.classList.add(tipo, "w3-round");
+	/*
+	const NOTIFGREEN	= "w3-red notif-red";
+	const NOTIFYELL	= "w3-yellow notif-yellow";
+	const NOTIFRED		= "w3-green notif-green";
+
+	const NOTIFGREEN	= "WR";
+	const NOTIFYELL	= "EX";
+	const NOTIFRED		= "OK";
+	 */
+	
+	switch (tipo) {
+		case NOTIFGREEN:
+			newMessage.classList.add("w3-red", "notif-red", "w3-round");
+			break;
+		case NOTIFYELL:
+			newMessage.classList.add("w3-yellow", "notif-yellow", "w3-round");
+		break;
+		case NOTIFRED:
+			newMessage.classList.add("w3-green", "notif-green", "w3-round");
+		break;
+		default:
+
+	}
+
 	newMessage.appendChild(newContent); //añade texto al div creado.
 
 	// añade el elemento creado y su contenido al DOM
