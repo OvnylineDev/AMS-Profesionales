@@ -93,12 +93,16 @@
 				<i id="selbut" class="fa fa-image"></i><br /><span id="numimg">No hay imágenes seleccionadas</span>
 				<input id="fileupload" name="img" type="file" accept="image/jpeg" multiple="multiple"/>
 				<span id="imagesel">
-					<div>
-						<i class="fa fa-times close"></i>
-						<canvas></canvas>
-						<textarea class="textfield"></textarea>
-						<span class="datetxt"></span>
-					</div>
+					<div><i class="fa fa-times close"></i><img src=".resources/testimg/01"/><textarea class="textfield"></textarea><span class="datetxt"></span></div>
+					<div><i class="fa fa-times close"></i><img src=".resources/testimg/02"/><textarea class="textfield"></textarea><span class="datetxt"></span></div>
+					<div><i class="fa fa-times close"></i><img src=".resources/testimg/03"/><textarea class="textfield"></textarea><span class="datetxt"></span></div>
+					<div><i class="fa fa-times close"></i><img src=".resources/testimg/04"/><textarea class="textfield"></textarea><span class="datetxt"></span></div>
+					<div><i class="fa fa-times close"></i><img src=".resources/testimg/05"/><textarea class="textfield"></textarea><span class="datetxt"></span></div>
+					<div><i class="fa fa-times close"></i><img src=".resources/testimg/06"/><textarea class="textfield"></textarea><span class="datetxt"></span></div>
+					<div><i class="fa fa-times close"></i><img src=".resources/testimg/07"/><textarea class="textfield"></textarea><span class="datetxt"></span></div>
+					<div><i class="fa fa-times close"></i><img src=".resources/testimg/08"/><textarea class="textfield"></textarea><span class="datetxt"></span></div>
+					<div><i class="fa fa-times close"></i><img src=".resources/testimg/09"/><textarea class="textfield"></textarea><span class="datetxt"></span></div>
+					<div><i class="fa fa-times close"></i><img src=".resources/testimg/10"/><textarea class="textfield"></textarea><span class="datetxt"></span></div>
 				</span>
 				<button id="send" class="w3-button w3-block w3-green w3-cell w3-right">Enviar</button>
 			</div>
@@ -182,7 +186,7 @@
 
 			$("#aceptxt").click(function() {
 				var myDate = new Date();
-				var files = $('#imagesel canvas');
+				var files = $('#imagesel img');
 				var filestxt = $('#imagesel textarea');
 				var spandate = $('#imagesel .datetxt');
 				var filedata = [];
