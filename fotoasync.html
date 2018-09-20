@@ -297,8 +297,7 @@
 				var imgs = $('#imagesel canvas');
 				// $('#imagesel').html("");
 
-				// for (var i = 0; i < files.length; i++) {
-				for (var i = 0; i < 10; i++) {
+				for (var i = 0; i < files.length; i++) {
 					var reader = new FileReader();
 
 					reader.onload = function(e) {
@@ -347,7 +346,9 @@
 						cont.appendChild(text);
 						cont.appendChild(dateTxt);
 
-						$('#imagesel').append(cont);
+						for (var i = 0; i < 10; i++) {
+							$('#imagesel').append(cont);
+						}
 						// $('#imagesel').append("<div id='" + pos + "' class='imgs'><i class='fa fa-times close' aria-hidden='true'></i><img src='" + dataimg + "'/><textarea class='textfield' cols='30' rows='8'></textarea></div>");
 					}
 
