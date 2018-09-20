@@ -93,7 +93,12 @@
 				<i id="selbut" class="fa fa-image"></i><br /><span id="numimg">No hay imágenes seleccionadas</span>
 				<input id="fileupload" name="img" type="file" accept="image/jpeg" multiple="multiple"/>
 				<span id="imagesel">
-
+					<div>
+						<i class="fa fa-times close"></i>
+						<canvas></canvas>
+						<textarea class="textfield"></textarea>
+						<span class="datetxt"></span>
+					</div>
 				</span>
 				<button id="send" class="w3-button w3-block w3-green w3-cell w3-right">Enviar</button>
 			</div>
@@ -346,10 +351,7 @@
 						cont.appendChild(text);
 						cont.appendChild(dateTxt);
 
-						for (var i = 0; i < 10; i++) {
-							mostrarNotificacion('Pasa por for varias veces', NOTIFGREEN);
-							$('#imagesel').append(cont);
-						}
+						$('#imagesel').append(cont);
 						// $('#imagesel').append("<div id='" + pos + "' class='imgs'><i class='fa fa-times close' aria-hidden='true'></i><img src='" + dataimg + "'/><textarea class='textfield' cols='30' rows='8'></textarea></div>");
 					}
 
