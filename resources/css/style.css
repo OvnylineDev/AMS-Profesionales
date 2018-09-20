@@ -148,7 +148,10 @@
 
 .notif-red::before,
 .notif-yellow::before,
-.notif-green::before{
+.notif-green::before,
+.notif-red::after,
+.notif-yellow::after,
+.notif-green::after{
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
@@ -158,20 +161,22 @@
     font-size: 10px;
     padding-right: 0.5em;
     position: absolute;
-    top: 10px;
     left: 0;
 }
-.notif-red::before{
+.notif-red::before,
+.notif-red::after{
      content: "\f06a";
      color:#fff!important;background-color:#f44336!important
 }
 
-.notif-yellow::before{
+.notif-yellow::before,
+.notif-yellow::after{
      content: "\f06a";
      color:#000!important;background-color:#ffeb3b!important
 }
 
-.notif-green::before{
+.notif-green::before,
+.notif-green::after{
      content: "\f06a";
      color:#fff!important;background-color:#4CAF50!important
 }
