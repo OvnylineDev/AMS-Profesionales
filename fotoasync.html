@@ -119,6 +119,14 @@
 			<button id="exitfalse" class="w3-button w3-block w3-red w3-cell w3-right" style="width:50%">Permanecer</button>
 		</div>
 	</div>
+
+	<!-- NOTIFICACIONES -->
+	<div id="notificaciones" class="w3-panel">
+		<!-- <div id="message">
+			Este es un mensaje de prueba por defecto.
+		</div> -->
+	</div>
+
 	<script>
 		var token = "";
 		var idSerie = "";
@@ -242,31 +250,37 @@
 								if (jsonrespuesta.status == "KO") {
 									switch (jsonrespuesta.error) {
 										case "10":
-											$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + jsonrespuesta.message + '.');
+											// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + jsonrespuesta.message + '.');
+											mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i>' + jsonrespuesta.message + '.', NOTIFYELL);
 											break;
 										case "99":
 											logout(token,localStorage.getItem(LOCALIDOP));
 											break;
 										default:
-											$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación');;
+											// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación');;
+											mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación', NOTIFYELL);
 									}
 								}
 								if (jsonrespuesta.status == "OK") {
-									$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fotografías enviadas.');
+									// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fotografías enviadas.');
+									mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Fotografías enviadas.', NOTIFGREEN);
 									$('#numimg').html("No hay imágenes seleccionadas");
 									$('#imagesel').html("");
 									$("#fileupload").replaceWith($("#fileupload").val("").clone(true));
 								}
 							},
 							error: function(jqXHR, textStatus, errorThrown) {
-								$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Error de acceso. El servidor no responde.');
+								// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Error de acceso. El servidor no responde.');
+								mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Error de acceso. El servidor no responde.', NOTIFRED);
 							},
 						});
 					}else{ //navigator
-						$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.');
+						// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.');
+						mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.', NOTIFRED);
 					}
 				} else {
-					$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Seleccione alguna imagen.');
+					// $("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Seleccione alguna imagen.');
+					mostrarNotificacion('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Seleccione alguna imagen.', NOTIFYELL);
 				}
 
 			});

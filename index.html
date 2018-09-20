@@ -1,76 +1,190 @@
-<html>
-     <head>
-          <script src="./resources/js/jq.js"></script>
-          <script src='./resources/tinymce/tinymce.min.js'></script>
+<!doctype html>
+<html lang="es-ES">
 
-          <style>
-               body {
-                    padding: 5px;
-               }
-               textarea{
-                    height: 100%;
-               }
-          </style>
-          <script>
-               tinymce.init({
-                    selector: 'textarea',
-                    theme: 'modern',
-                    language:'es',
-                    plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern help',
-                    toolbar: 'bold italic forecolor backcolor | numlist bullist outdent indent | alignleft aligncenter alignright alignjustify  | removeformat',
-                    browser_spellcheck: true,
-                    textcolor_map: [
-                         "000000", "Negro",
-                         "FF0000", "Rojo",
-                         "00FF00", "Verde",
-                         "0000FF", "Azul",
-                         "ccff00", "Azul",
-                         // "000000", "Black",
-                         // "993300", "Burnt orange",
-                         // "333300", "Dark olive",
-                         // "003300", "Dark green",
-                         // "003366", "Dark azure",
-                         // "000080", "Navy Blue",
-                         // "333399", "Indigo",
-                         // "333333", "Very dark gray",
-                         // "800000", "Maroon",
-                         // "FF6600", "Orange",
-                         // "808000", "Olive",
-                         // "008000", "Green",
-                         // "008080", "Teal",
-                         // "0000FF", "Blue",
-                         // "666699", "Grayish blue",
-                         // "808080", "Gray",
-                         // "FF0000", "Red",
-                         // "FF9900", "Amber",
-                         // "99CC00", "Yellow green",
-                         // "339966", "Sea green",
-                         // "33CCCC", "Turquoise",
-                         // "3366FF", "Royal blue",
-                         // "800080", "Purple",
-                         // "999999", "Medium gray",
-                         // "FF00FF", "Magenta",
-                         // "FFCC00", "Gold",
-                         // "FFFF00", "Yellow",
-                         // "00FF00", "Lime",
-                         // "00FFFF", "Aqua",
-                         // "00CCFF", "Sky blue",
-                         // "993366", "Red violet",
-                         // "FFFFFF", "White",
-                         // "FF99CC", "Pink",
-                         // "FFCC99", "Peach",
-                         // "FFFF99", "Light yellow",
-                         // "CCFFCC", "Pale green",
-                         // "CCFFFF", "Pale cyan",
-                         // "99CCFF", "Light sky blue",
-                         // "CC99FF", "Plum"
-                    ],
-                    menubar: ''
-               });
-          </script>
-     </head>
-     <body>
-          <textarea>
-          </textarea>
-     </body>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, shrink-to-fit=no" />
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><meta http-equiv="Last-Modified" content="0">
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>Gestión de Intervenciones 1.0</title>
+	<script type="text/javascript" src="./resources/js/jq.js"></script>
+
+	<script type="text/javascript" src="./resources/js/gv.js"></script>
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="./resources/js/pg.js"></script>
+
+	<link href="./resources/css/w3.css" rel="stylesheet">
+	<link href="./resources/css/style.css" rel="stylesheet">
+	<link href="./resources/fa/css/font-awesome.css" rel="stylesheet">
+	<style>
+		* {
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			outline: none;
+			box-sizing: border-box;
+		}
+
+		input{
+			text-transform: none !important;
+		}
+	</style>
+</head>
+
+<body class="w3-large">
+	<div id="titulo" class="w3-padding-large w3-large w3-red">
+
+	</div>
+	<div class="w3-padding-32"></div>
+	<div class="w3-padding-large">
+		<label>usuario</label>
+		<input class="w3-input w3-border-red" type="text" id="usuario" autocorrect="off" autocapitalize="off" spellcheck="false" />
+		<div class="w3-padding-16"></div>
+		<label>contraseña</label>
+		<input class="w3-input w3-border-red" type="password" id="clave" autocorrect="off" autocapitalize="off" spellcheck="false" />
+		<div class="w3-padding-32"></div>
+		<div class="w3-padding-16"></div>
+		<button id="boton_acceso" class="w3-button w3-block w3-red w3-padding-large w3-large w3-round-large">Acceder</button>
+		<div id="info_acceso" class="w3-padding-32 w3-center w3-text-red"></div>
+	</div>
+	<div id="notificaciones" class="w3-panel">
+		<!-- <div id="message">
+			Este es un mensaje de prueba por defecto.
+		</div> -->
+	</div>
+
+	<!-- <script type="text/javascript" src="./resources/js/pg.js"></script> -->
+	<script>
+		var mobtoken = "";
+
+		// Wait for device API libraries to load
+          document.addEventListener("deviceready", indexReady, false);
+
+          // device APIs are available
+          function indexReady() {
+			mobtoken = device.uuid;
+          }
+
+		$(document).ready(function() {
+
+			// mostrarNotificacion("Prueba de notificaciones", NOTIFGREEN);
+			// // mostrarNotificacion("Notificación 1");
+			// // mostrarNotificacion("Notificación 2");
+			// // mostrarNotificacion("Notificación 3");
+			// setTimeout(function() {
+		     //   mostrarNotificacion("Notificación 1", NOTIFRED);
+		  	// },1000);
+			// setTimeout(function() {
+		     //   mostrarNotificacion("Notificación 1", NOTIFYELL);
+		  	// },2000);
+
+			$("#titulo").html(NAMEAPP + " - " + NAMECOMP);
+
+			if (typeof(Storage) !== "undefined") {
+
+				var usuario = localStorage.getItem("gv_usuario");
+				var clave = localStorage.getItem("gv_clave");
+				//valorar posibilidad de guardar un timestamp para pedir cada x tiempo un acceso con clave.
+				$("#usuario").val(usuario);
+				$("#clave").val(clave);
+
+			} else {
+
+
+			}
+
+		});
+
+		$("#boton_acceso").on("click", {
+			"": ""
+		}, function(evento) {
+
+			var usuario = $.trim($("#usuario").val());
+			var clave = $.trim($("#clave").val());
+
+			if (usuario == "" || clave == "") {
+
+				$("#info_acceso").html("Por favor introduce usuario y contraseña.");
+			}
+
+			if (navigator.onLine) {
+
+				var params = {
+					"op": "login",
+					"usuario": usuario,
+					"clave": clave,
+					"mobtoken": mobtoken
+				};
+
+				// alert(mobincube);
+				$.ajax({
+					url: APIURL,
+					data: params, //parámetros pasados
+					type: 'POST',
+					dataType: "json",
+					crossDomain: true,
+					success: function(jsonrespuesta) {
+
+						if (jsonrespuesta.status == "KO") {
+							switch (jsonrespuesta.error) {
+								case "1":
+									$("#info_acceso").html("Error de base de datos: " + jsonrespuesta.message + ".");
+									break;
+								case "2":
+									$("#info_acceso").html("Hay un problema con su inicio de sesión, contacte con el administrador.");
+									break;
+								case "3":
+									$("#info_acceso").html("Su usuario no está activo para usar la aplicación móvil.");
+									break;
+								case "4":
+									$("#info_acceso").html("Usuario o clave no válidos.");
+									break;
+								case "99":
+									logout(mobtoken,localStorage.getItem(LOCALIDOP));
+									break;
+								default:
+									$("#info").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Ha ocurrido un error desconocido. Posiblemente necesite actualizar la aplicación');;
+
+							}
+						}
+						if (jsonrespuesta.status == "OK") {
+
+							if (typeof(Storage) !== "undefined") {
+
+								localStorage.setItem(LOCALUSER, usuario);
+								localStorage.setItem(LOCALPASS, clave);
+								localStorage.setItem(LOCALIDOP, jsonrespuesta.id);
+								localStorage.setItem(LOCALGREM, jsonrespuesta.gremio);
+								localStorage.setItem(LOCALSUBC, jsonrespuesta.subcont);
+
+								localStorage.setItem(LOCALTIMEACC, new Date().getTime());
+								//valorar posibilidad de guardar un timestamp para pedir cada x tiempo un acceso con clave.
+
+							} else {
+								alert("Su dispositivo no permite guardar el inicio de sesión, deberá introducir su usuario y clave en cada acceso");
+							}
+
+							window.location.href = "principal.html?token=" + jsonrespuesta.token;
+							// el json de respuesta debe emitir un token de sesión que se pasa como parámetro a cada página para realizar las llamadas, se recupera con la funcion gv_get_URL_parameter(sParam)
+
+						}
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						$("#info_acceso").html("Error de acceso. El servidor no responde.");
+					},
+					// async:false,
+				});
+			}else{ //navigator
+				$("#info_acceso").html('<i class="fa fa-exclamation-circle" aria-hidden="true"></i> Conexión a Internet no disponible, por favor inténtelo más tarde.');
+			}
+		});
+	</script>
+</body>
+
 </html>
